@@ -16,7 +16,8 @@ const navSlide = () => {
         });
     
     
-    });    
+    });
+    
 }
 
 navSlide();

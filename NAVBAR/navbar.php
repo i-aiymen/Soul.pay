@@ -1,27 +1,48 @@
 <div class="header w-nav">
-        <div class="container-default-1310px navbar">
+        <div class="container-default-1310px navbar" style="padding-left:0px;">
             <div class="split-left-container">
-                
-                <nav role="navigation" class="nav-menu w-nav-menu">
-                        <a href="/" data-w-id="aa8cd7b6-1626-0742-836e-149a366d7e8e" aria-current="page" class="nav-link w-nav-link w--current">
-                            Home
-                        </a>
-                        <a href="/" data-w-id="aa8cd7b6-1626-0742-836e-149a366d7e8e" aria-current="page" class="nav-link w-nav-link w--current">
-                            About Us
-                        </a>
-                        <a href="/services" data-w-id="aa8cd7b6-1626-0742-836e-149a366d7ebc" class="nav-link w-nav-link">Services</a>
-                        <div class="nav-menu-button-wrapper">
-                            <a data-w-id="38f80490-fa29-82ef-d32e-60c6b0fbb5ee" href="/open-account" class="button-primary w-button">Open account</a>
-                        </div>
+                <a href="#" aria-current="page" class="brand w-nav-brand w--current">
+                    <img src="ASSETS/photo3.svg" alt="" height=150 max-width=100% class="header-logo"/>
+                </a>
+                <nav id="menuList" role="navigation" class="nav-menu w-nav-menu">        
+                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                        Home
+                    </a>
+                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                        About Us
+                    </a>
+                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                        Policies
+                    </a>
+                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                        Branches & Atms
+                    </a>
+                    <div class="nav-menu-button-wrapper">
+                        <a href="#" class="button-primary w-button">Open account</a>
+                    </div>
                 </nav>
             </div>
-            <div class="split-right-container" data-w-id="aa8cd7b6-1626-0742-836e-149a366d7e8b">
-                <div class="menu-btn">
+            <div class="split-right-container" >
+                <div class="menu-btn" onclick="togglemenu()">
                     <div class="menu-btn__burger"></div>
                 </div>
-                <a href="/open-account"  class="button-secondary w-button">Open account</a>
+                <a href="#"  class="button-secondary v w-button">Open account</a>
             </div>
         </div>
     </div>
     <script src="JS/main.js"></script>
     <script src="JS/nav.js"></script>
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu() {
+            if(menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "550px";
+                menuList.style.boxShadow = "0 6px 4px -4px rgba(19, 1, 2, 0.18)";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+                menuList.style.boxShadow = "none"
+            }
+        }
+    </script>
