@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<link rel="stylesheet" href="CSS/navbar.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
     <div class="page-wrapper">
         <?php
-        include 'navbar.php';
+        include 'includes/navbar.php';
         ?>
 
         <div class="row g-0">
@@ -41,11 +41,11 @@
             </div>
             <div class="col-lg-6 g-0">
                 <div class="rightside">
-                    <img src="ASSETS/photo1.jpg" alt="" class="main_img">
+                    <img src="Assets/images/photo1.jpg" alt="" class="main_img">
                 </div>
             </div>
             <?php
-                include 'footer.php';
+                include 'includes/footer.php';
             ?>
         </div>
 </div>

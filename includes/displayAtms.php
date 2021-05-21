@@ -12,9 +12,9 @@
     if($resultnum>0){
         while($row=mysqli_fetch_assoc($result)){
             echo "<div class=\"col my-4\">
-                    <div class=\"card\">
+                    <div class=\"card h-100\">
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\">".++$count.". ".ucfirst(strtolower($row['ATMname']))." ATM</h5>
+                            <h5 class=\"card-title\" style=\"font: bold;\">".++$count.". ".ucfirst(strtolower($row['ATMname']))." ATM</h5>
                             <p class=\"card-text\">ATM Branch: ".$row['Branch']."
                             <br>
                             TerminalID: ".$row['TerminalID']."
