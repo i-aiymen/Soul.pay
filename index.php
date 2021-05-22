@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-6 g-0">
                 <div class="rightside">
-                    <img src="ASSETS/images/photo1.jpg" alt="" class="main_img">
+                    <img src="Assets/images/photo1.jpg" alt="" class="main_img">
                 </div>
             </div>
             <?php
