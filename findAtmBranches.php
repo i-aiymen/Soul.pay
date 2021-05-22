@@ -50,7 +50,7 @@
 <body>
     <?php
         include("INCLUDES/navbar.php");
-        require_once("DBCONFIG/dbconfig.inc.php");
+        require_once("INCLUDES/dbconfig.inc.php");
         ?>
     <div class="jumbotron">
         <div class="container">
