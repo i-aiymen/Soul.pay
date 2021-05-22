@@ -2,7 +2,7 @@
         <div class="container-default-1310px navbar" style="padding-left:0px;">
             <div class="split-left-container">
                 <a href="#" aria-current="page" class="brand w-nav-brand w--current">
-                    <img src="Assets/images/photo3.svg" alt="" height=150 max-width=100% class="header-logo"/>
+                    <img src="ASSETS/images/photo3.svg" alt="" height=150 max-width=100% class="header-logo"/>
                 </a>
                 <nav id="menuList" role="navigation" class="nav-menu w-nav-menu">        
                     <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
@@ -30,8 +30,8 @@
             </div>
         </div>
     </div>
-    <script src="../JS/main.js"></script>
-    <script src="../JS/nav.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/nav.js"></script>
     <script>
         var menuList = document.getElementById("menuList");
         menuList.style.maxHeight = "0px";

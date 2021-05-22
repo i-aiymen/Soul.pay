@@ -1,6 +1,6 @@
 <?php
     $stt = $_GET["selectvalue"];
-    require_once('dbconfig.inc.php');
+    require_once('DBCONFIG/dbconfig.inc.php');
     
     $sql = "select distinct District from branches where State = \"$stt\" ORDER BY District;";
     

@@ -15,7 +15,7 @@
 <body>
     <div class="page-wrapper">
         <?php
-        include 'includes/navbar.php';
+        include 'INCLUDES/navbar.php';
         ?>
 
         <div class="row g-0">
@@ -41,11 +41,11 @@
             </div>
             <div class="col-lg-6 g-0">
                 <div class="rightside">
-                    <img src="Assets/images/photo1.jpg" alt="" class="main_img">
+                    <img src="ASSETS/images/photo1.jpg" alt="" class="main_img">
                 </div>
             </div>
             <?php
-                include 'includes/footer.php';
+                include 'INCLUDES/footer.php';
             ?>
         </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
     $d = $_GET["district"];
-    require_once('dbconfig.inc.php');
+    require_once('DBCONFIG/dbconfig.inc.php');
     
     $sql = "select distinct * from atms where district = \"$d\" ORDER BY ATMname;";
     
