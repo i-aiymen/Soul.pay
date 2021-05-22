@@ -11,6 +11,8 @@
     // echo "<option value=".$stt."> hello </option>";
     if($resultnum>0){
         while($row=mysqli_fetch_assoc($result)){
-            echo "<option value=".$row['District'].">".$row['District']."</option>"; 
+            $d= $row['District'];
+            $statement = "<option value=".$d.">".$d."</option>";
+            echo $statement; 
         }
     }
