@@ -15,7 +15,7 @@
 <body>
     <div class="page-wrapper">
         <?php
-        include 'includes/navbar.php';
+        include 'INCLUDES/navbar.php';
         ?>
 
         <div class="row g-0">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <?php
-                include 'includes/footer.php';
+                include 'INCLUDES/footer.php';
             ?>
         </div>
 </div>
