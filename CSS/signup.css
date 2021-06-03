@@ -1,0 +1,45 @@
+.section{
+    background-image: linear-gradient(180deg, #fff 55%, #f20823 0);
+    padding-bottom: 5em;
+}
+.open-account{
+    margin: 2.4em 1.5em 0;
+}
+.open-account-text{
+    text-align: center;
+}
+.open-account-box{
+    text-align: center;
+    border: 1px rgb(221, 220, 220) solid;
+    padding: 3.4rem 2.2rem;
+    margin: 3rem auto 0;
+    background-color: white;
+    max-width: 750px;
+}
+.open-account-box input{
+    border: 1px rgb(221, 220, 220) solid;
+    width: 100%;
+    height: 3.4rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    outline: none;
+    transition: color 350ms ease, border-color 350ms ease;
+}
+.open-account-box input:hover{
+    border: 1px rgb(241, 54, 54) solid;
+}
+.open-account-box input:focus {
+    border: 1px rgb(241, 54, 54) solid;
+}
+
+label{
+    display: block;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    text-align: left;
+}
+form{
+    font-weight: bolder;
+    color: black;
+}
