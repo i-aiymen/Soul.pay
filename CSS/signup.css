@@ -1,6 +1,7 @@
 .section{
     background-image: linear-gradient(180deg, #fff 55%, #f20823 0);
     padding-bottom: 5em;
+    /* transition: max-height 1s ease; */
 }
 .open-account{
     margin: 2.4em 1.5em 0;
@@ -33,6 +34,25 @@
     border: 1px rgb(241, 54, 54) solid;
 }
 
+.errorbox{
+    margin: auto auto 2em auto;
+    border: 1px rgb(241, 54, 54) solid;
+    padding: 0.5em 1em;
+    font-size: medium;
+    display: inline-block;
+}
+
+.errorbox p{
+    margin: auto auto auto 1.3rem;
+    display: inline-block;
+}
+.errorbox span{
+    display: inline-block;
+}
+.fa-exclamation-circle{
+    color: red;
+    font-size: 1.5rem;
+}
 label{
     display: block;
     margin-bottom: 1rem;
@@ -42,4 +62,25 @@ label{
 form{
     font-weight: bolder;
     color: black;
+}
+.set-pwd-policy{
+    overflow: hidden;
+    height: 0;
+    transition: height 3s;
+}
+.pwd-policy{
+    border: 1px rgb(241, 54, 54) solid;
+    margin: 0rem 15px 2rem 15px;
+    font-size: small;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(58, 49, 49);
+    line-height: 27px;
+    padding: 0.5rem 1.5rem;
+}
+.pwd-head{
+    font-size: medium;
+}
+.pwd-body{
+    margin: 0 0;
 }
