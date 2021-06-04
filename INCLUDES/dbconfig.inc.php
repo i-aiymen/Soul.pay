@@ -1,11 +1,11 @@
 <?php
     $servername="localhost";
     $username="root";
-    $pwd="";
+    $pwdk="";
     $database = "banking";
 
-    $conn = mysqli_connect($servername,$username,$pwd,$database);
+    $conn = mysqli_connect($servername,$username,$pwdk,$database);
     if(!$conn){
-        die("Server connection error".mysqli_connect_error);
+        die("Server connection error".mysqli_connect_error());
     }
     

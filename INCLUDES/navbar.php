@@ -30,8 +30,8 @@
             </div>
         </div>
     </div>
-    <script src="JS/main.js"></script>
-    <script src="JS/nav.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/nav.js"></script>
     <script>
         var menuList = document.getElementById("menuList");
         menuList.style.maxHeight = "0px";

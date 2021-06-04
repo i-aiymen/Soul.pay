@@ -1,0 +1,86 @@
+.section{
+    background-image: linear-gradient(180deg, #fff 55%, #f20823 0);
+    padding-bottom: 5em;
+    /* transition: max-height 1s ease; */
+}
+.open-account{
+    margin: 2.4em 1.5em 0;
+}
+.open-account-text{
+    text-align: center;
+}
+.open-account-box{
+    text-align: center;
+    border: 1px rgb(221, 220, 220) solid;
+    padding: 3.4rem 2.2rem;
+    margin: 3rem auto 0;
+    background-color: white;
+    max-width: 750px;
+}
+.open-account-box input{
+    border: 1px rgb(221, 220, 220) solid;
+    width: 100%;
+    height: 3.4rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    outline: none;
+    transition: color 350ms ease, border-color 350ms ease;
+}
+.open-account-box input:hover{
+    border: 1px rgb(241, 54, 54) solid;
+}
+.open-account-box input:focus {
+    border: 1px rgb(241, 54, 54) solid;
+}
+
+.errorbox{
+    margin: auto auto 2em auto;
+    border: 1px rgb(241, 54, 54) solid;
+    padding: 0.5em 1em;
+    font-size: medium;
+    display: inline-block;
+}
+
+.errorbox p{
+    margin: auto auto auto 1.3rem;
+    display: inline-block;
+}
+.errorbox span{
+    display: inline-block;
+}
+.fa-exclamation-circle{
+    color: red;
+    font-size: 1.5rem;
+}
+label{
+    display: block;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    text-align: left;
+}
+form{
+    font-weight: bolder;
+    color: black;
+}
+.set-pwd-policy{
+    overflow: hidden;
+    height: 0;
+    transition: height 3s;
+}
+.pwd-policy{
+    border: 1px rgb(241, 54, 54) solid;
+    margin: 0rem 15px 2rem 15px;
+    font-size: small;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(58, 49, 49);
+    line-height: 27px;
+    padding: 0.5rem 1.5rem;
+}
+.pwd-head{
+    font-size: medium;
+}
+.pwd-body{
+    margin: 0 0;
+}
