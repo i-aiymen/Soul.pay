@@ -52,12 +52,12 @@
                             <div class="col-md">
                                 <label for="fname">First Name
                                 </label>
-                                <input type="text" id="fname" name="fname" placeholder="What's your first name?" autocomplete="on" required>
+                                <input type="text" id="fname" name="fname" placeholder="What's your first name?" autocomplete="on" onkeypress="return /[a-z]/i.test(event.key)" required>
                             </div>
                             <div class="col-md">
                                 <label for="lname">Last Name
                                 </label>
-                                <input type="text" id="lname" name="lname" placeholder="What's your last name?" autocomplete="on" required>
+                                <input type="text" id="lname" name="lname" placeholder="What's your last name?" autocomplete="on" onkeypress="return /[a-z]/i.test(event.key)" required>
                             </div>
                         </div>
                         <div class="row">
@@ -69,7 +69,7 @@
                             <div class="col-md">
                                 <label for="phone">Phone
                                 </label>
-                                <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" autocomplete="on" required>
+                                <input type="number" id="phone" name="phone" placeholder="xxx-xxx-xxxx" autocomplete="on" onKeyPress="if(this.value.length==10) return false;" required>
                             </div>
                         </div>
 
