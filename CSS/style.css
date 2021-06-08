@@ -75,12 +75,15 @@
     white-space: nowrap;
   }
 
-  .button-primary:hover {
+  .button-primary:hover:enabled {
     background-color: #d30814;
     box-shadow: none;
     color: #fff;
   }
   
+  .button-primary:disabled{
+    background-color: #ec8d98;
+  }
 
   .button-primary.large {
     padding: 22px 42px;

@@ -76,7 +76,7 @@ function pwdStrength($pwd)
 
 function createUser($conn, $fname, $lname, $email, $phone, $pwd)
 {
-    $sql = "insert into registration (fname,lname,email,phone,pass) values(?,?,?,?,?);";
+    $sql = "insert into users (user_firstname,user_lastname,user_email,user_phone,user_pwd,user_accountstate) values(?,?,?,?,?,'BLOCKED');";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
@@ -88,6 +88,28 @@ function createUser($conn, $fname, $lname, $email, $phone, $pwd)
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");
+}
+
+function verifyUser($conn,$verifyArr,$userid)
+{   
+    $sql = "update users SET `user_firstname` = ?, `user_lastname` = ?, `user_dob`= ?, `user_email`= ?, `user_phone`= ?, `user_aadharno`= ?, `user_pin`= ?, `user_balance`= 5000, `user_nationality`= ?, `user_houseno`= ?, `use_street`= ?, `user_district`= ?, `user_state`= ?, `user_accountstate`= 'VALID', `user_aadharfrontname`= ?, `user_aadharfrontsize`= ?, `user_aadharbackname`= ?, `user_aadharbacksize`= ?, `user_pincode`= ?, `user_accountno`= ? WHERE `users`.`user_id` = ?;";
+    
+    /*user_id   user_firstname   user_lastname   user_dob   user_email   user_phone   """user_pwd"""   user_aadharno   """user_pan"""   user_pin   """user_accountno"""   user_balace   """user_ifsc"""   user_nationality   user_houseno   use_street   user_district   user_state   """user_creation"""   user_accountstate   "user_aadharfrontname"   "user_aadharfrontsize"   "user_aadharfronttype"   "user_aadharbackname"   "user_aadharbacksize"   "user_aadharbacktype"   user_pincode */
+    
+    
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../verification.php?error=stmtfailed");
+        exit();
+    }
+    
+    $hashSpin = password_hash($verifyArr['spin'], PASSWORD_DEFAULT);
+    $useraccountno= $userid + 228282828;
+
+    mysqli_stmt_bind_param($stmt, "sssssssssssssssssss", $verifyArr['fname'], $verifyArr['lname'],$verifyArr['dob'], $verifyArr['email'], $verifyArr['phone'],$verifyArr['aadharNum'], $hashSpin,$verifyArr['nationality'],$verifyArr['house'],$verifyArr['street'],$verifyArr['district'],$verifyArr['state'],$verifyArr['aadharFrontName'],$verifyArr['aadharFrontSize'],$verifyArr['aadharBackName'],$verifyArr['aadharBackSize'],$verifyArr['pincode'],$useraccountno,$userid);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return false;
 }
 
 function emptyInputLogin($user, $pwd)
