@@ -1,3 +1,17 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
 .section{
     padding-bottom: 10em;
     text-align: center;
@@ -7,7 +21,7 @@
 
 .verify-carousel{
     border: 1px rgb(221, 220, 220) solid;
-    padding: 3.4rem 2.2rem;
+    padding: 1.5rem 2.2rem;
     margin: 5rem auto 0;
     background-color: white;
     max-width: 750px;
@@ -22,21 +36,37 @@
 }
 
 .carousel-container{
-    position: relative;
+    height: 767px;
+    width: 42.5rem;
     overflow: hidden;
-    height: 607px;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-track{
-    height: 100%;
-    transition: transform 390ms linear;
+    padding: 0 0;
     display: flex;
     flex-flow: row nowrap;
-    padding: 0 0;
+    min-width: 400%;
+    margin: auto auto;
+    transition: transform 390ms linear;
 }
 
+
 .carousel-slide{
-    min-width: 100%;
+    width: 25%;
+}
+
+ul{
+    color: black;
+}
+
+.slide-text{
+    margin-bottom: 3.5rem;
+    margin-top: 0.9rem;
+}
+.slide-text h6{
+    margin-top: 1.5rem;
 }
 
 .verification input{
@@ -50,6 +80,7 @@
     transition: color 350ms ease, border-color 350ms ease;
 }
 
+
 .verification input:hover{
     border: 1px rgb(241, 54, 54) solid;
 }
@@ -57,23 +88,116 @@
     border: 1px rgb(241, 54, 54) solid;
 }
 
+/* .no-border{
+    border: none !important;
+} */
+
 label{
     display: block;
     margin-bottom: 1rem;
     line-height: 1.2rem;
     text-align: left;
 }
+
+.buttons label{
+    display: initial;
+}
+
 form{
     font-weight: bolder;
     color: black;
-    bottom: 0;
 }
 
+form button{
+    width: 10rem;
+}
 .carousel-track li{
     list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
-.carousel-track-container ul{
+button + button{
+    margin-left: 17em;
+}
+
+.btn-small{
+    width: 7.5rem;
+}
+
+.buttons{
+    align-self: center;
+    margin-top: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-nav button{
+    border: 2px solid #e93600;
+    padding: 6.5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.carousel-nav .current-slide{
+    background: #fd4108;
+}
+
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+  }
+
+.file-input label {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(241, 54, 54), #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f20823, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}
+
+.aadhar{
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem auto;
+}
+
+.aadhar-label{
     margin: 0 0;
-    padding: 0 0;
+}
+
+.disp-file-name{
+    position: absolute;
+    font-size: initial;
+    left: 67%;
+    font-weight: normal;
+    top: 37%;
+    right: 3%;
+}
+
+.row{
+    justify-content: center;
+}
+
+#pinerror i{
+    margin-left: 1rem;
+    color: red;
+}
+#pinerror{
+    font-size: small;
+    font-weight: normal;
 }
