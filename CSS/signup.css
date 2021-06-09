@@ -96,3 +96,7 @@ form{
 .pwd-body{
     margin: 0 0;
 }
+
+.maxw{
+    max-width: 620px;
+}
