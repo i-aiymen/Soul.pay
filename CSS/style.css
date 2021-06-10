@@ -75,7 +75,7 @@
     white-space: nowrap;
   }
 
-  .button-primary:hover:enabled {
+  .button-primary:hover {
     background-color: #d30814;
     box-shadow: none;
     color: #fff;
@@ -83,6 +83,7 @@
   
   .button-primary:disabled{
     background-color: #ec8d98;
+    border-color: #ec8d98;
   }
 
   .button-primary.large {

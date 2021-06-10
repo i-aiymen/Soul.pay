@@ -1,10 +1,12 @@
 <?php
-    if(!isset($_POST['submit'])){
-        header("location: ../verification.php");
+    session_start();
+    if(!isset($_POST['submit']) || !isset($_SESSION["user_id"]) ){
+        header("location: ../index.php");
         exit();
     }
     else {
 
+        $userid = $_SESSION["user_id"];
         $verifyArr=array();
 
         $verifyArr['fname'] = $_POST["fname"];
@@ -56,7 +58,8 @@
             //storing files in server
             if(move_uploaded_file($_FILES["aadharf"]["tmp_name"], $targetFilePathFront) &&
             move_uploaded_file($_FILES["aadharb"]["tmp_name"], $targetFilePathBAck)){
-                
+                session_unset();
+                session_destroy();
                 header("location: ../verification.php?error=none");
                 exit();
 
