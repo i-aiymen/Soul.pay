@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION["user_email"]))
+    {
+        header("location: index.php");
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,26 +53,34 @@
                                         <div class="col-md">
                                             <label for="fname">First Name
                                             </label>
-                                            <input type="text" id="fname" name="fname" placeholder="What's your first name?" onkeypress="return /[a-z]/i.test(event.key)" required>
+                                                <?php
+                                                    echo "<input type=\"text\" id=\"fname\" name=\"fname\" placeholder=\"What's your first name?\" onkeypress=\"return /[a-z]/i.test(event.key)\" value =".$_SESSION["user_firstname"]." required>";
+                                                ?>
                                         </div>
                                         <div class="col-md">
                                             <label for="lname">Last Name
                                             </label>
-                                            <input type="text" id="lname" name="lname" placeholder="What's your last name?" onkeypress="return /[a-z]/i.test(event.key)" required>
+                                                <?php
+                                                    echo "<input type=\"text\" id=\"lname\" name=\"lname\" placeholder=\"What's your last name?\" onkeypress=\"return /[a-z]/i.test(event.key)\" value =".$_SESSION["user_lastname"]." required>";
+                                                 ?>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md">
                                             <label for="email">Email
                                             </label>
-                                            <input type="email" id="email" name="email" placeholder="What's your email?" required>
+                                                <?php
+                                                    echo "<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"What's your email?\" value=".$_SESSION["user_email"]." required>";
+                                                ?>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md">
                                             <label for="phone">Phone
                                             </label>
-                                            <input type="number" id="phone" name="phone" placeholder="xxx-xxx-xxxx" onKeyPress="if(this.value.length==10) return false;" minlength="10" required>
+                                                <?php
+                                                    echo "<input type=\"number\" id=\"phone\" name=\"phone\" placeholder=\"xxx-xxx-xxxx\" onKeyPress=\"if(this.value.length==10) return false;\" minlength=\"10\" value=".$_SESSION["user_phone"]." required>";
+                                                ?>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -197,7 +213,7 @@
                                     <div class="row">
                                         <div class="buttons">
                                             <button id="finalsubmit"class="button-primary large" name="submit" type="submit">
-                                                Sign Up
+                                                Submit
                                             </button>
                                         </div>
                                     </div>
