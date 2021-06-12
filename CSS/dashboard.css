@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&display=swap');
 
 :root {
   --first-color: #12192C;
@@ -624,3 +626,171 @@ cursor: pointer;
     }
 
   }
+
+
+
+
+
+/* Profile System */
+.profile{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  height: calc(100vh - 70px);
+  max-height: calc(100vh - 70px);
+  padding: 2rem 0;
+  font-size: 1.05rem;
+}
+
+.profile.personal{
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  align-items: center;
+  background: #fff;
+  flex: 1 0 0;
+  margin: 0 1.2rem;
+  padding: 0 0;
+  box-shadow: 8px 9px 8px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.profile.non-personal{
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  flex: 1.35 0 0;
+  margin: 0 1.2rem 0 0;
+  padding: 0 0;
+  text-align: center;
+}
+
+.contact{
+  display: flex;
+  flex-flow: column wrap;
+  background: #fff;
+  flex: 1 0 0;
+  align-items: center;
+  padding: 0 0;
+  margin-right: 0.6rem;
+  height: 100%;
+  box-shadow: 5px 6px 8px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  justify-content: space-between;
+}
+.location{
+  display: flex;
+  background: #fff;
+  flex-flow: column wrap;
+  flex: 1 0 0;
+  align-items: center;
+  padding: 0 0;
+  height: 100%;
+  box-shadow: 5px 6px 8px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.gradient-border{
+  background-color: rgb(60 46 46 / 71%);
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #4b24aa, #ff7043);
+}
+
+
+.avatar-wrapper{
+  width: 92.5%;
+  height: 91.5%;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  margin: auto auto;
+  border: 1px rgb(126, 118, 118) solid;
+}
+
+.section-title{
+  width: 100%;
+  height: 9.5%;
+  font-size: x-large;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+.title-text{
+  align-self: flex-end;
+}
+
+.text-fields{
+  margin-bottom: 1.7rem;
+  height: 302.6px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+}
+
+.personal-text{
+  height: 57%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+.contact-text , .location-text{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.field-value{
+  font-weight: 400;
+}
+
+.position-middle{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.position-middle .field+.field{
+  margin-top: 3rem;
+}
+.location-text .position-middle .field+.field{
+  margin-top: 1rem;
+}
+
+.non-personal i{
+  display: inline-block;
+  font-size: 45px;
+  height: 74px;
+  width: 74px;
+  line-height: 74px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.non-personal .contact i{
+  background: #b2fdbb;
+  color: #11d829;
+}
+
+.non-personal .location i{
+  background: #b2f8fd;
+  color: #1178d8;
+}
+
+.avatar-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #171313;
+}
