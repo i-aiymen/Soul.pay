@@ -34,14 +34,8 @@
                 }
                 if(isset($_GET['error'])){
                 $error=$_GET['error'];
-                if($error == 'uidexists'){
-                    showerror("User already Exists!");
-                }
-                if($error == 'pwdnomatch'){
-                    showerror("The passwords don't match!");
-                }
-                if($error == 'pwdstrength'){
-                    showerror("Please make the password more strong!");
+                if($error == 'wronglogin'){
+                    showerror("You haven't registered!");
                 }
                 if($error == 'vnone'){
                     showerror("Your Account is being verified!");

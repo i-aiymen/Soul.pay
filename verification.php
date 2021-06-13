@@ -121,12 +121,12 @@
                                         <div class="col-md">
                                             <label for="district">District
                                             </label>
-                                            <input type="text" id="district" name="district" placeholder="District?" required>
+                                            <input type="text" id="district" name="district" placeholder="District?" required onkeypress="return /[a-z]/i.test(event.key)">
                                         </div>
                                         <div class="col-md">
                                             <label for="state">State
                                             </label>
-                                            <input type="text" id="state" name="state" placeholder="State" required>
+                                            <input type="text" id="state" name="state" placeholder="State" required onkeypress="return /[a-z]/i.test(event.key)">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -138,7 +138,7 @@
                                         <div class="col">
                                             <label for="nationality">Country
                                             </label>
-                                            <input type="text" id="nationality" name="nationality" placeholder="Country" required>
+                                            <input type="text" id="nationality" name="nationality" placeholder="Country" required onkeypress="return /[a-z]/i.test(event.key)">
                                         </div>
                                     </div>
                                 </div>
