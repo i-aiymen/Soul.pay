@@ -147,7 +147,7 @@ button + button{
 
 .file {
     opacity: 0;
-    width: 0.1px;
+    width: 0.1px !important;
     height: 0.1px;
     position: absolute;
   }
