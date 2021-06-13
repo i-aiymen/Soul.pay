@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/dashboard.css">
+  <link rel="stylesheet" href="CSS/debitcard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
@@ -255,46 +256,19 @@
         </svg>
       </button>
 
-      <h2>OTHER BANK GATEWAY</h2>
+      <h2>Apply For New Card</h2>
       <div class="form">
-        <div class="card-transaction space icon-relative">
-          <label class="label">Recipient: <span style="color: red;">*</span></label>
-          <input type="text" class="input" placeholder="Name">
-          <i class="far fa-user"></i>
-        </div>
-        <div class="card-transaction space icon-relative">
-          <label class="label">Account Number: <span style="color: red;">*</span></label>
-          <input type="text" class="input" data-mask="0000000000" placeholder="**********">
-          <i class="far fa-credit-card"></i>
-        </div>
-        <div class="card-transaction space icon-relative">
-          <label class="label">IFSC: <span style="color: red;">*</span></label>
-          <input type="text" class="input" data-mask="0000000000">
-          <i class="far fa-credit-card"></i>
-        </div>
-        <div class="card-transaction space icon-relative">
-          <label class="label">Amount: <span style="color: red;">*</span></label>
-          <input type="text" class="input" data-mask="00000" placeholder="">
-          <i class="bx bx-sm bx-rupee far"></i>
-        </div>
-        <div class="card-transaction space icon-relative">
-          <label class="label">Remark:</label>
-          <input type="text" class="input">
-        </div>
-
-        <div class="card-grp space">
-          <div class="card-item icon-relative">
-            <label class="label">OTP: <span style="color: red;">*</span></label>
-            <input type="text" class="input" data-mask="0-0-0-0" placeholder="####">
-            <i class="fas fa-lock"></i>
+        
+        <div class="card-transaction space icon-relative debit">
+          <label class="label">Pick card type:<span style="color: red;">*</span></label>
+          <div class="card-types">
+            <div class="card-type"><i class="fab fa-cc-visa"></i></div>
+            <div class="card-type"><i class="fab fa-cc-paypal"></i></div>
+            <div class="card-type"><i class="fab fa-cc-mastercard"></i></div>
+            <div class="card-type"><i class="fab fa-cc-amex"></i></div></div>
           </div>
-          <div class="card-item1 space1">
-            <button class="resend">Resend?</button>
-          </div>
-        </div>
-        <span><label>9:45</label></span> <span><i class='bx bx-time'></i></span>
         <div class="btn">
-          Transfer
+          Apply
         </div>
 
       </div>
