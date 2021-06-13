@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2021 at 05:43 PM
+-- Generation Time: Jun 13, 2021 at 07:09 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -2321,7 +2321,7 @@ CREATE TABLE `users` (
   `user_email` varchar(100) NOT NULL,
   `user_pwd` varchar(260) NOT NULL,
   `user_pin` varchar(260) DEFAULT NULL,
-  `user_aadharno` int(13) NOT NULL,
+  `user_aadharno` varchar(13) NOT NULL,
   `user_accountno` varchar(100) NOT NULL,
   `user_balance` float DEFAULT NULL,
   `user_ifsc` varchar(15) DEFAULT NULL,
@@ -2344,7 +2344,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_firstname`, `user_lastname`, `user_dob`, `user_phone`, `user_email`, `user_pwd`, `user_pin`, `user_aadharno`, `user_accountno`, `user_balance`, `user_ifsc`, `user_nationality`, `user_houseno`, `use_street`, `user_district`, `user_state`, `user_creation`, `user_accountstate`, `user_aadharfrontname`, `user_aadharfrontsize`, `user_aadharbackname`, `user_aadharbacksize`, `user_pincode`) VALUES
-(10, 'Manu', 'Jasan', '10-09-2000', '7306553123', 'manujasan23@gmail.com', '$2y$10$dLF3EBGjSvLW7CRwQuAHourWWl0qgsNRVgZzZvSqlMVydDk.VZloy', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', 2147483647, '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-10 01:43:57', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383);
+(10, 'Manu', 'Jasan', '10-09-2000', '7306553123', 'manujasan23@gmail.com', '$2y$10$dLF3EBGjSvLW7CRwQuAHourWWl0qgsNRVgZzZvSqlMVydDk.VZloy', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', '2147483647', '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-10 01:43:57', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383),
+(11, 'Manu', 'Jasan', '10-09-2000', '3838383838', 'manujasan23@gmail.com', '$2y$10$qleuIHy5I/T7kaStoG6Tf.M8f8AY1b3jsYjBiDFTw6ckZAg4UlxmO', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', '939393938281', '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-10 15:46:42', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383),
+(12, 'Manu', 'Jasan', '10-09-2000', '3838383838', 'manujasan23@gmail.com', '$2y$10$4Need1zQGowTldS14eiQWODwDQNZ7q1vQ4qs1ZgZsZqYpMeQVek3W', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', '2147483647', '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-12 16:09:48', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383),
+(14, 'Poojar', 'Suresh', '2021-06-08', '3939894938', 'pooja@gmail.com', '$2y$10$I1C3BofOIjt49IjKTH6MJO.tzapPv6GOSSaXnhVfGkLMr6comRMrm', '$2y$10$yZZVUxisuBjfTsMEysDGhuY60VHY2UmD7A3o3FuxxVtQGTwzSYMTq', '111111111111', '228282842', 5000, NULL, 'dfdff', '33', 'dfdf', 'dfdfd', 'dfdf', '2021-06-12 16:58:34', 'BLOCKED', '1doge.jfif', 94686, 'book(output).png', 30255, 222222),
+(15, 'mike', 'bond', NULL, '3838388888', 'mkbond@gmail.com', '$2y$10$dRZkIKEgTBGk6Vg51I2KDulSHnBVQMedb3qtXeYX.isJXQdikwerS', NULL, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-13 05:07:29', 'BLOCKED', NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -2364,7 +2368,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
