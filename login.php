@@ -46,6 +46,15 @@
                 if($error == 'wrongpass'){
                     showerror("Wrong Password!");
                 }
+                if($error == 'vnone'){
+                    showerror("Your Account is being verified!");
+                }
+                if($error == 'none'){
+                    showerror("Signup Success!");
+                }
+                if($error == 'wrongpass'){
+                    showerror("Wrong Password!");
+                }
             }
             ?>
                 <form action="includes/login.inc.php" method="POST">
