@@ -32,8 +32,6 @@
         $targetFilePathBAck = $targetDir.$verifyArr['aadharBackName'];
         $verifyArr['aadharFrontSize'] = $_FILES["aadharf"]["size"];
         $verifyArr['aadharBackSize'] = $_FILES["aadharb"]["size"];
-        
-        $userid=1;
 
         require_once("dbconfig.inc.php");
         require_once("functions.inc.php");
@@ -60,7 +58,7 @@
             move_uploaded_file($_FILES["aadharb"]["tmp_name"], $targetFilePathBAck)){
                 session_unset();
                 session_destroy();
-                header("location: ../verification.php?error=none");
+                header("location: ../login.php?error=vnone");
                 exit();
 
             }
