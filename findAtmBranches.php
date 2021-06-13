@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <style>
-        * {
-        }
         ::-webkit-scrollbar {
             width: 0px;
             background: transparent;

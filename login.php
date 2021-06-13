@@ -37,22 +37,13 @@
                 if($error == 'wronglogin'){
                     showerror("You haven't registered!");
                 }
-                if($error == 'vnone'){
+                else if($error == 'vnone'){
                     showerror("Your Account is being verified!");
                 }
-                if($error == 'none'){
+                else if($error == 'none'){
                     showerror("Signup Success!");
                 }
-                if($error == 'wrongpass'){
-                    showerror("Wrong Password!");
-                }
-                if($error == 'vnone'){
-                    showerror("Your Account is being verified!");
-                }
-                if($error == 'none'){
-                    showerror("Signup Success!");
-                }
-                if($error == 'wrongpass'){
+                else if($error == 'wrongpass'){
                     showerror("Wrong Password!");
                 }
             }
