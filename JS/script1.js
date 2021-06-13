@@ -13,3 +13,11 @@ function toggle1() {
     pop1.classList.toggle('show1');
 
 }
+
+function toggle2() {
+    var blur1 = document.getElementById('blur');
+            blur1.classList.toggle('show1');
+    var pop1 = document.getElementById('modal_container2');
+    pop1.classList.toggle('show1');
+
+}

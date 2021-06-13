@@ -94,11 +94,11 @@
               <i class='bx bx-user nav__icon'></i>
               <span class="nav__text">My Profile</span>
             </a>
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" > 
               <i class='bx bxs-phone nav__icon'></i>
               <span class="nav__text">Customer Service</span>
             </a>
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" id="debitCard">
               <i class='bx bxs-credit-card nav__icon'></i>
               <span class="nav__text">Debit Card Services</span>
             </a>
@@ -147,22 +147,22 @@
 
       <h2>SOUL GATEWAY</h2>
       <div class="form">
-        <div class="card space icon-relative">
+        <div class="card-transaction space icon-relative">
           <label class="label">Recipient: <span style="color: red;">*</span></label>
           <input type="text" class="input" placeholder="Name">
           <i class="far fa-user"></i>
         </div>
-        <div class="card space icon-relative">
+        <div class="card-transaction space icon-relative">
           <label class="label">Account Number: <span style="color: red;">*</span></label>
           <input type="text" class="input" data-mask="0000000000" placeholder="**********">
           <i class="far fa-credit-card"></i>
         </div>
-        <div class="card space icon-relative">
+        <div class="card-transaction space icon-relative">
           <label class="label">Amount: <span style="color: red;">*</span></label>
           <input type="text" class="input" data-mask="00000" placeholder="">
           <i class="bx bx-sm bx-rupee far"></i>
         </div>
-        <div class="card space icon-relative">
+        <div class="card-transaction space icon-relative">
           <label class="label">Remark:</label>
           <input type="text" class="input">
         </div>
@@ -186,60 +186,122 @@
 
     </div>
   </div>
-
-
-
   <div class="modal-container" id="modal_container1">
-        <div class="modal">
-            <button id="close1" onclick="toggle1()" class="cross">
-                <svg data-testid="test-svg" width="14" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Artboard-Copy-43" transform="translate(-5.000000, -5.000000)"><g id="close"><path d="M5.57098982,5.65032324 C5.78968342,5.43162963 6.14425581,5.43162963 6.36294941,5.65032324 L6.36294941,5.65032324 L11.9059696,11.194303 L17.450383,5.65032324 C17.6447773,5.45592892 17.9465326,5.43432955 18.1647849,5.58552513 L18.2423426,5.65032324 C18.4610362,5.86901684 18.4610362,6.22358923 18.2423426,6.44228283 L18.2423426,6.44228283 L12.6979696,11.985303 L18.2423426,17.5297164 C18.4367369,17.7241107 18.4583363,18.025866 18.3071407,18.2441184 L18.2423426,18.321676 C18.023649,18.5403696 17.6690766,18.5403696 17.450383,18.321676 L17.450383,18.321676 L11.9059696,12.777303 L6.36294941,18.321676 C6.1685551,18.5160703 5.86679977,18.5376697 5.64854745,18.3864741 L5.57098982,18.321676 C5.35229621,18.1029824 5.35229621,17.74841 5.57098982,17.5297164 L5.57098982,17.5297164 L11.1149696,11.985303 L5.57098982,6.44228283 C5.3765955,6.24788852 5.35499614,5.94613319 5.50619171,5.72788087 Z" id="Combined-Shape"></path></g></g></svg>
-            </button>
+    <div class="modal">
+      <button id="close1" onclick="toggle1()" class="cross">
+        <svg data-testid="test-svg" width="14" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Artboard-Copy-43" transform="translate(-5.000000, -5.000000)">
+            <g id="close">
+              <path d="M5.57098982,5.65032324 C5.78968342,5.43162963 6.14425581,5.43162963 6.36294941,5.65032324 L6.36294941,5.65032324 L11.9059696,11.194303 L17.450383,5.65032324 C17.6447773,5.45592892 17.9465326,5.43432955 18.1647849,5.58552513 L18.2423426,5.65032324 C18.4610362,5.86901684 18.4610362,6.22358923 18.2423426,6.44228283 L18.2423426,6.44228283 L12.6979696,11.985303 L18.2423426,17.5297164 C18.4367369,17.7241107 18.4583363,18.025866 18.3071407,18.2441184 L18.2423426,18.321676 C18.023649,18.5403696 17.6690766,18.5403696 17.450383,18.321676 L17.450383,18.321676 L11.9059696,12.777303 L6.36294941,18.321676 C6.1685551,18.5160703 5.86679977,18.5376697 5.64854745,18.3864741 L5.57098982,18.321676 C5.35229621,18.1029824 5.35229621,17.74841 5.57098982,17.5297164 L5.57098982,17.5297164 L11.1149696,11.985303 L5.57098982,6.44228283 C5.3765955,6.24788852 5.35499614,5.94613319 5.50619171,5.72788087 Z" id="Combined-Shape"></path>
+            </g>
+          </g>
+        </svg>
+      </button>
 
-              <h2>OTHER BANK GATEWAY</h2>
-              <div class="form">
-                <div class="card space icon-relative">
-                  <label class="label">Recipient: <span style="color: red;">*</span></label>
-                  <input type="text" class="input" placeholder="Name">
-                  <i class="far fa-user"></i>
-                </div>
-                <div class="card space icon-relative">
-                  <label class="label">Account Number: <span style="color: red;">*</span></label>
-                  <input type="text" class="input" data-mask="0000000000" placeholder="**********">
-                  <i class="far fa-credit-card"></i>
-                </div>
-                <div class="card space icon-relative">
-                  <label class="label">IFSC: <span style="color: red;">*</span></label>
-                  <input type="text" class="input" data-mask="0000000000">
-                  <i class="far fa-credit-card"></i>
-                </div>
-                <div class="card space icon-relative">
-                  <label class="label">Amount: <span style="color: red;">*</span></label>
-                  <input type="text" class="input" data-mask="00000" placeholder="">
-                  <i class="bx bx-sm bx-rupee far"></i>
-                </div>
-                <div class="card space icon-relative">
-                  <label class="label">Remark:</label>
-                  <input type="text" class="input">
-                </div>
-                
-                <div class="card-grp space">
-                  <div class="card-item icon-relative">
-                    <label class="label">OTP: <span style="color: red;">*</span></label>
-                    <input type="text" class="input" data-mask="0-0-0-0" placeholder="####">
-                    <i class="fas fa-lock"></i>
-                  </div>
-                  <div class="card-item1 space1">
-                    <button class="resend">Resend?</button> 
-                  </div>
-                </div>
-                <span><label>9:45</label></span> <span><i class='bx bx-time'></i></span>
-                <div class="btn">
-                  Transfer
-                </div> 
-                
-              </div>
+      <h2>OTHER BANK GATEWAY</h2>
+      <div class="form">
+        <div class="card-transaction space icon-relative">
+          <label class="label">Recipient: <span style="color: red;">*</span></label>
+          <input type="text" class="input" placeholder="Name">
+          <i class="far fa-user"></i>
         </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">Account Number: <span style="color: red;">*</span></label>
+          <input type="text" class="input" data-mask="0000000000" placeholder="**********">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">IFSC: <span style="color: red;">*</span></label>
+          <input type="text" class="input" data-mask="0000000000">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">Amount: <span style="color: red;">*</span></label>
+          <input type="text" class="input" data-mask="00000" placeholder="">
+          <i class="bx bx-sm bx-rupee far"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">Remark:</label>
+          <input type="text" class="input">
+        </div>
+
+        <div class="card-grp space">
+          <div class="card-item icon-relative">
+            <label class="label">OTP: <span style="color: red;">*</span></label>
+            <input type="text" class="input" data-mask="0-0-0-0" placeholder="####">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="card-item1 space1">
+            <button class="resend">Resend?</button>
+          </div>
+        </div>
+        <span><label>9:45</label></span> <span><i class='bx bx-time'></i></span>
+        <div class="btn">
+          Transfer
+        </div>
+
+      </div>
     </div>
+  </div>
+  <div class="modal-container" id="modal_container2">
+    <div class="modal">
+      <button id="close1" onclick="toggle2()" class="cross">
+        <svg data-testid="test-svg" width="14" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Artboard-Copy-43" transform="translate(-5.000000, -5.000000)">
+            <g id="close">
+              <path d="M5.57098982,5.65032324 C5.78968342,5.43162963 6.14425581,5.43162963 6.36294941,5.65032324 L6.36294941,5.65032324 L11.9059696,11.194303 L17.450383,5.65032324 C17.6447773,5.45592892 17.9465326,5.43432955 18.1647849,5.58552513 L18.2423426,5.65032324 C18.4610362,5.86901684 18.4610362,6.22358923 18.2423426,6.44228283 L18.2423426,6.44228283 L12.6979696,11.985303 L18.2423426,17.5297164 C18.4367369,17.7241107 18.4583363,18.025866 18.3071407,18.2441184 L18.2423426,18.321676 C18.023649,18.5403696 17.6690766,18.5403696 17.450383,18.321676 L17.450383,18.321676 L11.9059696,12.777303 L6.36294941,18.321676 C6.1685551,18.5160703 5.86679977,18.5376697 5.64854745,18.3864741 L5.57098982,18.321676 C5.35229621,18.1029824 5.35229621,17.74841 5.57098982,17.5297164 L5.57098982,17.5297164 L11.1149696,11.985303 L5.57098982,6.44228283 C5.3765955,6.24788852 5.35499614,5.94613319 5.50619171,5.72788087 Z" id="Combined-Shape"></path>
+            </g>
+          </g>
+        </svg>
+      </button>
+
+      <h2>OTHER BANK GATEWAY</h2>
+      <div class="form">
+        <div class="card-transaction space icon-relative">
+          <label class="label">Recipient: <span style="color: red;">*</span></label>
+          <input type="text" class="input" placeholder="Name">
+          <i class="far fa-user"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">Account Number: <span style="color: red;">*</span></label>
+          <input type="text" class="input" data-mask="0000000000" placeholder="**********">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">IFSC: <span style="color: red;">*</span></label>
+          <input type="text" class="input" data-mask="0000000000">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">Amount: <span style="color: red;">*</span></label>
+          <input type="text" class="input" data-mask="00000" placeholder="">
+          <i class="bx bx-sm bx-rupee far"></i>
+        </div>
+        <div class="card-transaction space icon-relative">
+          <label class="label">Remark:</label>
+          <input type="text" class="input">
+        </div>
+
+        <div class="card-grp space">
+          <div class="card-item icon-relative">
+            <label class="label">OTP: <span style="color: red;">*</span></label>
+            <input type="text" class="input" data-mask="0-0-0-0" placeholder="####">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="card-item1 space1">
+            <button class="resend">Resend?</button>
+          </div>
+        </div>
+        <span><label>9:45</label></span> <span><i class='bx bx-time'></i></span>
+        <div class="btn">
+          Transfer
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
@@ -247,4 +309,5 @@
   <script src="JS/script1.js"></script>
   <script src="JS/dashboard.js"></script>
 </body>
+
 </html>

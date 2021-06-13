@@ -17,18 +17,23 @@ optionsList.forEach(o => {
 
 
 //-------ajax load content--------//
-function changeCanvas() {
-  console.log("hello");
-  const ajaxreq = new XMLHttpRequest();
-  ajaxreq.open('GET', "http://localhost/projects/Banking/includes/showProfile.dash.php");
-  ajaxreq.send();
-  ajaxreq.onreadystatechange = function () {
-    if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
-      document.getElementById("home-content").innerHTML = ajaxreq.responseText;
-    }
-  };
-}
+
 window.onload=function(){
-  const myProfile= document.getElementById("myProfile");
-  myProfile.addEventListener("click", changeCanvas);
+  var canvasObj = {"myProfile": "showProfile.dash.php", "debitCard": "debitCards.dash.php"};
+  
+  for (const [key, value] of Object.entries(canvasObj)) {
+    var elem = document.getElementById(key);
+
+    elem.addEventListener("click", e=>{
+      const ajaxreq = new XMLHttpRequest();
+      ajaxreq.open('GET', "http://localhost/projects/Banking/includes/"+value);
+      ajaxreq.send();
+      ajaxreq.onreadystatechange = function () {
+        if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
+          document.getElementById("home-content").innerHTML = ajaxreq.responseText;
+        }
+      }
+    });
+  }
+
 }

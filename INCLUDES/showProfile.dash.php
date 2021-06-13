@@ -12,6 +12,7 @@
         $s = $row["user_creation"];
         $dt = new DateTime($s);
         $date = $dt->format('d/m/Y');
+        $accountno=substr($row["user_accountno"],0,3)."-".substr($row["user_accountno"],3,3)."-".substr($row["user_accountno"],6,3);
         echo "<div class=\"profile\">
                     <div class=\"profile personal\">
                     <div class=\"section-title\">
@@ -41,7 +42,7 @@
                         </div>
                         <div class=\"field last-field\">
                             <span class=\"field-title\">Account Number:</span>
-                            <span class=\"field-value\">".$row["user_accountno"]."</span>
+                            <span class=\"field-value\">".$accountno."</span>
                         </div>
                     </div>
                 </div>
