@@ -34,22 +34,16 @@
                 }
                 if(isset($_GET['error'])){
                 $error=$_GET['error'];
-                if($error == 'uidexists'){
-                    showerror("User already Exists!");
+                if($error == 'wronglogin'){
+                    showerror("You haven't registered!");
                 }
-                if($error == 'pwdnomatch'){
-                    showerror("The passwords don't match!");
-                }
-                if($error == 'pwdstrength'){
-                    showerror("Please make the password more strong!");
-                }
-                if($error == 'vnone'){
+                else if($error == 'vnone'){
                     showerror("Your Account is being verified!");
                 }
-                if($error == 'none'){
+                else if($error == 'none'){
                     showerror("Signup Success!");
                 }
-                if($error == 'wrongpass'){
+                else if($error == 'wrongpass'){
                     showerror("Wrong Password!");
                 }
             }

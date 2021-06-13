@@ -1,0 +1,44 @@
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+#displaybranchesnAtms {
+    background: rgb(241, 79, 79);
+    padding: 0em 1em;
+    color: rgb(0 0 0 / 87%);
+    border-radius: 39px;
+    margin: 0 0.5em;
+}
+
+a{
+    color: black;
+}
+
+.card{
+    border-radius: 0;
+    border: 0;
+}
+
+.card-body{
+    box-shadow: 10px 10px 20px -11px rgba(204,34,34,0.75);
+}
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    border: 0;
+}
+
+.card.h-100{
+    border-radius: 16px;
+    box-shadow: 9px 9px 10px -5px rgb(130 85 141 / 68%);
+}
+.card-title{
+    font-family: 'Roboto Slab', serif;
+    color: black;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: black;
+}
+.tab-content .card-title{
+    color: #503232
+}

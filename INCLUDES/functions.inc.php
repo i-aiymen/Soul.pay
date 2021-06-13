@@ -106,7 +106,6 @@ function verifyUser($conn,$verifyArr,$userid)
     $verifyArr["phone"]=(string)$verifyArr["phone"];
     $hashSpin = password_hash($verifyArr['spin'], PASSWORD_DEFAULT);
     $useraccountno= $userid + 228282828;
-    
     // mysqli_stmt_bind_param($stmt, "ss", $verifyArr['fname'],$userid);
 
     mysqli_stmt_bind_param($stmt, "sssssssssssssssssss", $verifyArr['fname'], $verifyArr['lname'],$verifyArr['dob'], $verifyArr['email'], $verifyArr['phone'],$verifyArr['aadharNum'], $hashSpin,$verifyArr['nationality'],$verifyArr['house'],$verifyArr['street'],$verifyArr['district'],$verifyArr['state'],$verifyArr['aadharFrontName'],$verifyArr['aadharFrontSize'],$verifyArr['aadharBackName'],$verifyArr['aadharBackSize'],$verifyArr['pincode'],$useraccountno,$userid);

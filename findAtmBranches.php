@@ -14,38 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
-    <style>
-        * {
-        }
-        ::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
-        }
-
-        #displaybranchesnAtms {
-            background: rgb(241, 79, 79);
-            background: linear-gradient(180deg, rgba(230, 97, 97, 1) 0%, rgba(230, 230, 255, 1) 47%, rgba(208, 255, 243, 1) 100%);
-            padding: 0em 1em;
-            color: rgba(0, 0, 0, 0.75);
-        }
-
-        #displaybranchesnAtms h5 {
-            font-weight: bolder;
-            font-family: sans-serif;
-            font-size: 1.5rem;
-
-        }
-
-        .card-title {
-            font-weight: 500;
-            font-family: Arial, sans-serif;
-            font-size: 1.5rem;
-            color: rgba(0, 0, 0, 0.75);
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/atmbranch.css">
 </head>
 
 <body>
@@ -82,13 +53,13 @@
                                             <option selected>Choose...</option>
 
                                             <?php
-                                                $sql="select distinct State from Branches ORDER BY State;";
+                                                $sql="select distinct State from branches ORDER BY State;";
                                                 $result=mysqli_query($conn,$sql);
                                                 $resultCheck = mysqli_num_rows($result);
     
                                                 if($resultCheck>0){
                                                     while($row=mysqli_fetch_assoc($result)){
-                                                        echo "<option value=".$row['State'].">".$row['State']."</option>";
+                                                        echo "<option value='".$row['State']."'>".$row['State']."</option>";
                                                     }
                                                 }
                                             ?>
@@ -123,16 +94,16 @@
                                             <option selected>Choose...</option>
 
                                             <?php
-                                        $sql="select distinct State from Branches ORDER BY State;";
-                                        $result=mysqli_query($conn,$sql);
-                                        $resultCheck = mysqli_num_rows($result);
+                                                $sql="select distinct State from atms ORDER BY State;";
+                                                $result=mysqli_query($conn,$sql);
+                                                $resultCheck = mysqli_num_rows($result);
 
-                                        if($resultCheck>0){
-                                            while($row=mysqli_fetch_assoc($result)){
-                                                echo "<option value=".$row['State'].">".$row['State']."</option>";
-                                            }
-                                        }
-                                    ?>
+                                                if($resultCheck>0){
+                                                    while($row=mysqli_fetch_assoc($result)){
+                                                        echo "<option value='".$row['State']."'>".$row['State']."</option>";
+                                                    }
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="input-group mb-3">
@@ -167,7 +138,7 @@
     <script type="text/javascript">
         function showDistricts(state, name) {
             const ajaxreq = new XMLHttpRequest();
-            ajaxreq.open('GET', "http://localhost/projects/Banking/includes/sendDistricts.php?selectvalue=" + state, 'true');
+            ajaxreq.open('GET', "http://localhost/projects/Banking/includes/sendDistricts.php?selectvalue=" + state +"&type="+name, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
@@ -180,7 +151,9 @@
                 }
             };
         }
+
         function displayBranches() {
+            event.preventDefault();
             const ajaxreq = new XMLHttpRequest();
             district = document.getElementById("District").value;
             // document.getElementById("displaybranchesnAtms").innerHTML = district;
@@ -192,7 +165,9 @@
                 }
             };
         }
+
         function displayAtms() {
+            event.preventDefault();
             const ajaxreq = new XMLHttpRequest();
             district = document.getElementById("District2").value;
             ajaxreq.open('GET', "http://localhost/projects/Banking/includes/displayAtms.php?district=" + district, 'true');
