@@ -1,0 +1,279 @@
+body{
+  font-family: Manrope, sans-serif;
+  color: rgb(82, 79, 79);
+  font-size: 24px;
+  background-color:white;
+margin: 0;
+ 
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.yo{
+  display:flex;
+  flex-direction: row;
+  height:600px;
+  
+  }
+.my h1{
+  font-size:45px;
+  color: #01030a;
+}
+.span-primary-color{
+color:#f20823;
+}
+.image
+{
+width:80vw;
+height:auto;
+}
+.my{
+width:50vw;
+height:auto;
+padding-top:2%;
+float: left;
+padding-left: 10px;
+text-align: left;
+
+}
+
+.others{
+ width:100%;
+height:50px;
+}
+
+.button-secondary.v {
+padding: 22px 36px;
+border-style: solid;
+border-width: 1px;
+font-weight: 700;
+border-color: #f20823;
+border-radius: 80px;
+background-color: #f20823;
+-webkit-transition: color 350ms ease, background-color 350ms ease;
+transition: color 350ms ease, background-color 350ms ease;
+color: #fff;
+line-height: 20px;
+text-align: center;
+white-space: nowrap;
+}
+#login
+{
+width:38%;
+ position: relative;
+top:-62px;
+}
+
+#sign
+{   
+text-align: center;
+width:38%;
+position: relative;
+top:-62px;
+left:25px;
+}
+
+.others img{
+  width:60px;
+  height:40px;
+
+}
+
+#get{
+  margin-left: 80%;
+  position: relative;
+  bottom:25%;
+}
+.sec3{
+  width:100%;
+  height: 600px;
+  text-align: center; 
+}
+.sec3 h2{ padding-top: 0px;
+  color: black; 
+   text-align : center;   
+}
+.row-sm-4{
+padding-top: 10px;
+}
+.row{
+padding-top: 10px;
+padding-left: 10px;
+width:100%;
+}
+.col-sm-4 h2{
+  color: #000;
+}
+.col-sm-4{
+  text-align: center;
+}
+.global h1{
+   color: black;
+   text-align: center;
+}
+.global{
+  text-align: center;
+  padding-top: 40px;
+
+}
+.map{
+   background-image: url('mapp.jpg');
+
+   height: 500px; 
+   margin-left:0;
+   margin-right: 0;
+}
+.last{
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 916px)
+
+{
+body{
+  line-height: 30px;
+  width: 100%;
+}
+.yo{
+height:600px;
+}
+.my{
+  height: auto;
+  padding-left: 10px;
+  padding-top:0;
+  text-align: centre;
+  width:100%;
+}
+.image{
+width:100%;
+height:auto;
+}
+.image img{
+width:contain;
+height:auto;
+
+}
+.others{
+   width:100%;
+   height:500px;
+}
+
+.sec3{
+  height:auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#login{
+display: block !important;
+width:40%;
+text-align: center;
+
+}
+#sign
+{
+display: block !important;
+position: relative;
+text-align: center;
+width:45%;
+top:-128px;
+left:160px;
+}
+#get
+{
+display: block !important;
+width:20%;
+position: relative;
+bottom:450px;
+right:20px;
+
+}
+
+
+}
+@media screen and (max-width: 541px) {
+   #login{
+    display: block !important;
+    width:60%;
+    text-align: center;
+    position: relative;
+    left:48px;
+  }
+  .container-fluid
+  {
+    width:contain;
+  }
+  #sign
+  {
+    display: block !important;
+    position: relative;
+    top:-40px;
+    width:60%;
+    left:50px;
+    text-align: center;
+  }
+  #get
+  {
+    display: block !important;
+    width:60%;
+    text-align: center;
+    position: relative;
+    bottom:400px;
+    right:70%;
+  }
+  .yo{
+    flex-direction: column;
+    height: auto;
+  }
+ .image img{
+   width:100%;
+   height:400px;
+ }
+  
+ }
+ @media screen and (min-width: 917px)and (max-width:1030px)
+ {
+   .image{
+     width:auto;
+     height:auto;
+   }
+   .my{
+     width:500px;
+   }
+   .image img{
+     width:550px;
+     height:600px;
+   }
+   #sign
+   {
+       width:45%;
+   }
+ }
+ @media screen and (min-width:700px)and (max-width:800px)
+ {
+   .yo{
+     flex-direction: column;
+     height:auto;
+   }
+   #sign
+   { position: relative;
+     left:400px;
+     width:30%;
+   }
+   #login{
+     width:30%;
+     left:100px;
+   }
+   .my{
+     text-align:center;
+   }
+ }
+ 

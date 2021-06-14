@@ -1,7 +1,7 @@
 <?php
     $servername="localhost";
     $username="root";
-    $pwdk="";
+    $pwdk="almaas03";
     $database = "banking";
 
     $conn = mysqli_connect($servername,$username,$pwdk,$database);

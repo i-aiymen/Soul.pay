@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2021 at 07:09 AM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: Jun 14, 2021 at 08:44 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,38 @@ SET time_zone = "+00:00";
 --
 -- Database: `banking`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `user_id` int(5) NOT NULL,
+  `date_opened` timestamp NOT NULL DEFAULT current_timestamp(),
+  `currency` varchar(16) NOT NULL,
+  `user_email` varchar(64) NOT NULL,
+  `user_lastname` varchar(64) NOT NULL,
+  `user_firstname` varchar(32) NOT NULL,
+  `user_accountno` varchar(16) NOT NULL,
+  `user_ifsc` varchar(32) NOT NULL,
+  `limit_per_day_transfer` varchar(10) NOT NULL,
+  `amounts_transferred` varchar(10) NOT NULL,
+  `amounts_from_reserve` varchar(5) NOT NULL,
+  `amounts_from_others` varchar(10) NOT NULL,
+  `user_balance` float NOT NULL,
+  `user_accounttype` varchar(8) NOT NULL,
+  `otp` varchar(4) NOT NULL,
+  `otptime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`user_id`, `date_opened`, `currency`, `user_email`, `user_lastname`, `user_firstname`, `user_accountno`, `user_ifsc`, `limit_per_day_transfer`, `amounts_transferred`, `amounts_from_reserve`, `amounts_from_others`, `user_balance`, `user_accounttype`, `otp`, `otptime`) VALUES
+(15, '2021-06-14 16:09:32', 'Rs', 'aiymenarbaaz03@gmail.com', 'Arbaaz', 'Muhammed', '228282843', 'SOUL0000844', '20000', '1000', '20', '', 5000, 'active', '', '2021-06-14 23:09:28');
 
 -- --------------------------------------------------------
 
@@ -2309,6 +2341,153 @@ INSERT INTO `branches` (`SerialNum`, `Branch`, `BranchIncharge`, `IFSCcode`, `Di
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contactform`
+--
+
+CREATE TABLE `contactform` (
+  `id` int(11) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Phone` varchar(30) NOT NULL,
+  `Email` varchar(30) NOT NULL,
+  `Service` varchar(100) NOT NULL,
+  `Message` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `debitcard`
+--
+
+CREATE TABLE `debitcard` (
+  `debit_request` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `debit_cardtype` varchar(100) NOT NULL,
+  `debit_house` varchar(100) NOT NULL,
+  `debit_street` varchar(100) NOT NULL,
+  `debit_district` varchar(100) NOT NULL,
+  `debit_state` varchar(100) NOT NULL,
+  `debit_pincode` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `other_bank`
+--
+
+CREATE TABLE `other_bank` (
+  `ID` int(5) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Account_no` int(15) NOT NULL,
+  `IFSC` varchar(100) NOT NULL,
+  `Amount_from_others` int(5) NOT NULL,
+  `Balance` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `other_bank`
+--
+
+INSERT INTO `other_bank` (`ID`, `Name`, `Account_no`, `IFSC`, `Amount_from_others`, `Balance`) VALUES
+(1, 'Binuraj', 987567345, 'FDRL0004566', 0, 5600),
+(2, 'Vipin', 587677345, 'SIBL0002366', 0, 10000),
+(3, 'Kailas', 786667345, 'SBIN0000264', 0, 3500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `soulbank_reserve`
+--
+
+CREATE TABLE `soulbank_reserve` (
+  `id` int(11) NOT NULL,
+  `date_transfer` timestamp NOT NULL DEFAULT current_timestamp(),
+  `_from_customer_lastname` varchar(64) NOT NULL,
+  `_from_customer_ifsc` varchar(34) NOT NULL,
+  `_to_customer_lastname` varchar(64) NOT NULL,
+  `_to_customer_ifsc` varchar(34) NOT NULL,
+  `transaction_number` varchar(16) NOT NULL,
+  `amount_reserve` varchar(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `soulbank_total_reserves`
+--
+
+CREATE TABLE `soulbank_total_reserves` (
+  `soul_bank_id` varchar(14) NOT NULL,
+  `total_reserve` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `soulbank_total_reserves`
+--
+
+INSERT INTO `soulbank_total_reserves` (`soul_bank_id`, `total_reserve`) VALUES
+('SOUL_PAY_1010', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions_all`
+--
+
+CREATE TABLE `transactions_all` (
+  `id` int(10) NOT NULL,
+  `date_transfer` timestamp NOT NULL DEFAULT current_timestamp(),
+  `_from_customer_lastname` varchar(64) NOT NULL,
+  `_from_customer_accno_iban` varchar(32) NOT NULL,
+  `_to_customer_lastname` varchar(64) NOT NULL,
+  `_to_customer_accno_iban` varchar(32) NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `transaction_number` varchar(16) NOT NULL,
+  `amount` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions_other_bank`
+--
+
+CREATE TABLE `transactions_other_bank` (
+  `id` int(10) NOT NULL,
+  `date_transfer` timestamp NOT NULL DEFAULT current_timestamp(),
+  `_from_customer_lastname` varchar(64) NOT NULL,
+  `_from_customer_Ifsc` varchar(32) NOT NULL,
+  `_to_customer_lastname` varchar(64) NOT NULL,
+  `_to_customer_Ifsc` varchar(32) NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `transaction_number` varchar(16) NOT NULL,
+  `amount_from_reserve` varchar(2) NOT NULL,
+  `amount` varchar(8) NOT NULL,
+  `total_amount` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions_soul_bank`
+--
+
+CREATE TABLE `transactions_soul_bank` (
+  `id` int(10) NOT NULL,
+  `date_transfer` timestamp NOT NULL DEFAULT current_timestamp(),
+  `_from_customer_lastname` varchar(64) NOT NULL,
+  `_from_customer_account_no` varchar(32) NOT NULL,
+  `_to_customer_lastname` varchar(64) NOT NULL,
+  `_to_customer_account_no` varchar(32) NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `transaction_number` varchar(16) NOT NULL,
+  `amount` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -2344,15 +2523,71 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_firstname`, `user_lastname`, `user_dob`, `user_phone`, `user_email`, `user_pwd`, `user_pin`, `user_aadharno`, `user_accountno`, `user_balance`, `user_ifsc`, `user_nationality`, `user_houseno`, `use_street`, `user_district`, `user_state`, `user_creation`, `user_accountstate`, `user_aadharfrontname`, `user_aadharfrontsize`, `user_aadharbackname`, `user_aadharbacksize`, `user_pincode`) VALUES
-(10, 'Manu', 'Jasan', '10-09-2000', '7306553123', 'manujasan23@gmail.com', '$2y$10$dLF3EBGjSvLW7CRwQuAHourWWl0qgsNRVgZzZvSqlMVydDk.VZloy', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', '2147483647', '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-10 01:43:57', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383),
-(11, 'Manu', 'Jasan', '10-09-2000', '3838383838', 'manujasan23@gmail.com', '$2y$10$qleuIHy5I/T7kaStoG6Tf.M8f8AY1b3jsYjBiDFTw6ckZAg4UlxmO', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', '939393938281', '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-10 15:46:42', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383),
-(12, 'Manu', 'Jasan', '10-09-2000', '3838383838', 'manujasan23@gmail.com', '$2y$10$4Need1zQGowTldS14eiQWODwDQNZ7q1vQ4qs1ZgZsZqYpMeQVek3W', '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', '2147483647', '3333838', 5000, NULL, 'India', '23', 'what', 'kottayam', 'kerala', '2021-06-12 16:09:48', 'BLOCKED', 'mike', 38383, 'mdj', 328282, 38383),
-(14, 'Poojar', 'Suresh', '2021-06-08', '3939894938', 'pooja@gmail.com', '$2y$10$I1C3BofOIjt49IjKTH6MJO.tzapPv6GOSSaXnhVfGkLMr6comRMrm', '$2y$10$yZZVUxisuBjfTsMEysDGhuY60VHY2UmD7A3o3FuxxVtQGTwzSYMTq', '111111111111', '228282842', 5000, NULL, 'dfdff', '33', 'dfdf', 'dfdfd', 'dfdf', '2021-06-12 16:58:34', 'BLOCKED', '1doge.jfif', 94686, 'book(output).png', 30255, 222222),
-(15, 'mike', 'bond', NULL, '3838388888', 'mkbond@gmail.com', '$2y$10$dRZkIKEgTBGk6Vg51I2KDulSHnBVQMedb3qtXeYX.isJXQdikwerS', NULL, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-13 05:07:29', 'BLOCKED', NULL, NULL, NULL, NULL, NULL);
+(15, 'Muhammed', 'Arbaaz', '2021-06-16', '7034297953', 'aiymenarbaaz03@gmail.com', '$2y$10$2b.PNXwzmQKK9d.5zQH5h.WgyPFkGwgI8i2QYA//9py421nWZBJRG', '$2y$10$4XFR6WNuIGJvQO/zLbABOejPvcVNOiV3/jdQU81cD/SL/yzfhVg2C', '2147483647', '228282843', 5000, 'SOUL0000844', 'INDIA', '543', 'Uliyil', 'Kannur', 'Kerala', '2021-06-14 16:07:54', 'active', 'Screenshot (268).png', 39275, 'Screenshot (269).png', 33723, 670702);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `user_accountno` (`user_accountno`),
+  ADD UNIQUE KEY `user_ifsc` (`user_ifsc`),
+  ADD UNIQUE KEY `user_email` (`user_email`);
+
+--
+-- Indexes for table `contactform`
+--
+ALTER TABLE `contactform`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `debitcard`
+--
+ALTER TABLE `debitcard`
+  ADD PRIMARY KEY (`debit_request`);
+
+--
+-- Indexes for table `other_bank`
+--
+ALTER TABLE `other_bank`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `soulbank_reserve`
+--
+ALTER TABLE `soulbank_reserve`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `soulbank_total_reserves`
+--
+ALTER TABLE `soulbank_total_reserves`
+  ADD UNIQUE KEY `soul_bank_id` (`soul_bank_id`);
+
+--
+-- Indexes for table `transactions_all`
+--
+ALTER TABLE `transactions_all`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `transaction number` (`transaction_number`);
+
+--
+-- Indexes for table `transactions_other_bank`
+--
+ALTER TABLE `transactions_other_bank`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `transaction number` (`transaction_number`);
+
+--
+-- Indexes for table `transactions_soul_bank`
+--
+ALTER TABLE `transactions_soul_bank`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `transaction number` (`transaction_number`);
 
 --
 -- Indexes for table `users`
@@ -2365,10 +2600,52 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `contactform`
+--
+ALTER TABLE `contactform`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `debitcard`
+--
+ALTER TABLE `debitcard`
+  MODIFY `debit_request` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `other_bank`
+--
+ALTER TABLE `other_bank`
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `soulbank_reserve`
+--
+ALTER TABLE `soulbank_reserve`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `transactions_all`
+--
+ALTER TABLE `transactions_all`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `transactions_other_bank`
+--
+ALTER TABLE `transactions_other_bank`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `transactions_soul_bank`
+--
+ALTER TABLE `transactions_soul_bank`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

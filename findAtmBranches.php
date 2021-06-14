@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/atmbranch.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
@@ -138,7 +139,7 @@
     <script type="text/javascript">
         function showDistricts(state, name) {
             const ajaxreq = new XMLHttpRequest();
-            ajaxreq.open('GET', "http://localhost/projects/Banking/includes/sendDistricts.php?selectvalue=" + state +"&type="+name, 'true');
+            ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/sendDistricts.php?selectvalue=" + state +"&type="+name, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
@@ -157,7 +158,7 @@
             const ajaxreq = new XMLHttpRequest();
             district = document.getElementById("District").value;
             // document.getElementById("displaybranchesnAtms").innerHTML = district;
-            ajaxreq.open('GET', "http://localhost/projects/Banking/includes/displayBranches.php?district=" + district, 'true');
+            ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/displayBranches.php?district=" + district, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {

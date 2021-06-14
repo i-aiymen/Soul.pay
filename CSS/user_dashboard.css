@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
 /*===== VARIABLES CSS Y SASS =====*/
 /*Varibles sass*/
 /*Variables css*/
@@ -91,10 +94,10 @@ i.icon {
 
 .icon-button__badge {
   position: absolute;
-  top: -7px;
-  right: -5px;
-  width: 20px;
-  height: 20px;
+  top: -3px;
+  right: -3px;
+  width: 15px;
+  height: 15px;
   background: red;
   color: #ffffff;
   display: flex;
@@ -146,7 +149,11 @@ i.icon {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2rem;
-  padding: 0 .5rem;
+}
+
+.nav__logo img {
+  width: 40px;
+  height: 40px;
 }
 
 .nav__logo-icon {
@@ -160,7 +167,7 @@ i.icon {
 
 .nav__toggle {
   position: absolute;
-  top: 1.5rem;
+  top: 1.4rem;
   right: -.6rem;
   width: 18px;
   height: 18px;
@@ -629,9 +636,11 @@ a.resend:hover {
           width: 56px;
       }
 
+
       .l-navbar.show {
           width: 230px;
       }
+
 
       .home-section{
         width: calc(100% - 56px);

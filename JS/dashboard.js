@@ -26,7 +26,7 @@ window.onload=function(){
 
     elem.addEventListener("click", e=>{
       const ajaxreq = new XMLHttpRequest();
-      ajaxreq.open('GET', "http://localhost/projects/Banking/includes/"+value);
+      ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/"+value);
       ajaxreq.send();
       ajaxreq.onreadystatechange = function () {
         if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
@@ -42,7 +42,7 @@ function submit(){
   var inputs = document.getElementById("debitAppln").elements;
   var cardtype= document.getElementsByClassName("selected").value;
   var ajaxreq = new XMLHttpRequest();
-  ajaxreq.open("POST", "http://localhost/projects/Banking/includes/debitAppln.php?house="+inputs['house'].value+"&street="+inputs['street'].value+"&district="+inputs['district'].value+"&state="+inputs['state'].value+"&pincode="+inputs['pincode'].value+"&cardtype="+inputs['cardtype'].value, true);
+  ajaxreq.open("POST", "http://localhost/mini_project_s4/INCLUDES/debitAppln.php?house="+inputs['house'].value+"&street="+inputs['street'].value+"&district="+inputs['district'].value+"&state="+inputs['state'].value+"&pincode="+inputs['pincode'].value+"&cardtype="+inputs['cardtype'].value, true);
   ajaxreq.send();
       ajaxreq.onreadystatechange = function () {
         if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {

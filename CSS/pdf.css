@@ -1,0 +1,251 @@
+:root {
+    --body-bg: rgb(204, 204, 204);
+    --white: #ffffff;
+    --darkWhite: #ccc;
+    --black: #000000;
+    --dark: #615c60;
+    --themeColor: #1a233d;
+    --pageShadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+
+
+body {
+    background-color: var(--body-bg);
+    font-family: Manrope, sans-serif;
+}
+
+.button {
+
+    display: flex;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin-top: 15px;
+    margin-left: 300px;
+    background: #253153;
+    border: none !important;
+    outline: none !important;
+    border-radius: 50%;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: #273255;
+  }
+  
+  .button:active {
+    background: #1e2641;
+  }
+  
+  .button__icon {
+      
+    display: inline-flex;
+    align-items: center;
+    padding: 0 13.5px;
+    color: #fff;
+    height: 100%;
+  }
+  
+  .button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+  }
+  
+
+.p-5 {
+    padding-top: 0 !important;
+}
+
+.page {
+    background: var(--white);
+    display: block;
+    margin: 0 auto;
+    margin-top: 0 !important;
+    position: relative;
+    box-shadow: var(--pageShadow);
+}
+
+.page[size="A4"] {
+    width: 21cm;
+    height: auto;
+    overflow: hidden;
+}
+
+.bb {
+    border-bottom: 3px solid var(--darkWhite);
+}
+
+
+
+.span-primary-color {
+    color: #f20823;
+  }
+.logo img {
+    height: 150px;
+}
+
+.top-left {
+    margin-top: 48px;
+}
+
+.top-left p {
+    margin: 0;
+
+}
+
+.col-5 {
+    white-space: nowrap;
+}
+
+.top-left .graphic-path {
+    height: 40px;
+    position: relative;
+}
+
+.top-left .graphic-path::before {
+    content: "";
+    height: 20px;
+    background-color: var(--dark);
+    position: absolute;
+    left: 15px;
+    right: 0;
+    top: -15px;
+    z-index: 2;
+}
+
+.top-left .graphic-path::after {
+    content: "";
+    height: 22px;
+    width: 17px;
+    background: var(--black);
+    position: absolute;
+    top: -13px;
+    left: 6px;
+    transform: rotate(45deg);
+}
+
+.top-left .graphic-path p {
+    color: var(--white);
+    height: 40px;
+    left: 0;
+    right: -100px;
+    text-transform: uppercase;
+    background-color: var(--themeColor);
+    font: 26px;
+    z-index: 3;
+    position: absolute;
+    padding-left: 10px;
+}
+
+
+.store-user {
+    margin-top: 36px !important;
+    padding-bottom: 25px;
+}
+
+.store-user p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.store-user .address {
+    font-weight: 400;
+}
+.span-primary-color {
+    color: #f20823;
+  }
+
+.store-user h2 {
+    font-size:2em;
+    font-weight:bold;
+
+    color: #0a1023;
+
+}
+
+.extra-info p span {
+    font-weight: 400;
+}
+
+
+thead {
+    color: var(--white);
+    background: var(--themeColor);
+}
+
+.table td,
+.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr th:first-child,
+tr td:first-child {
+    text-align: left;
+}
+
+.media img {
+    height: 60px;
+    width: 60px;
+}
+
+.media p {
+    font-weight: 400;
+    margin: 0;
+}
+
+.media p.title {
+    font-weight: 600;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+
+    bottom: 30px;
+    left: 75px;
+}
+
+.footer hr {
+    margin-bottom: -22px;
+    border-top: 3px solid var(--darkWhite);
+}
+
+
+
+.footer p {
+    padding: 6px;
+    border: 3px solid var(--darkWhite);
+    background-color: var(--white);
+    display: inline-block;
+}
+
+@font-face {
+    font-family: 'Icons Banca Template';
+    src: url('https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5eaca55000e6c654fee36944_icons-banca-template.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea6f17e02970b5f034be5e5_Manrope-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea6f17f7bfbfb5e11b9f56b_Manrope-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+  }
+
+
+

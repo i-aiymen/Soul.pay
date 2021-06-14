@@ -1,24 +1,27 @@
 <div class="header w-nav">
         <div class="container-default-1310px navbar" style="padding-left:0px;">
             <div class="split-left-container">
-                <a href="#" aria-current="page" class="brand w-nav-brand w--current">
+                <a href="index.php" aria-current="page" class="brand w-nav-brand w--current">
                     <img src="Assets/images/photo3.svg" alt="" height=150 max-width=100% class="header-logo"/>
                 </a>
                 <nav id="menuList" role="navigation" class="nav-menu w-nav-menu">        
-                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                    <a href="index.php" aria-current="page" class="nav-link w-nav-link w--current">
                         Home
                     </a>
-                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                    <a href="aboutus.php" aria-current="page" class="nav-link w-nav-link w--current">
                         About Us
                     </a>
-                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
-                        Policies
+                    <a href="services.php" aria-current="page" class="nav-link w-nav-link w--current">
+                        Services
                     </a>
-                    <a href="#" aria-current="page" class="nav-link w-nav-link w--current">
+                    <a href="contactus.php" aria-current="page" class="nav-link w-nav-link w--current">
+                        Contact Us
+                    </a>
+                    <a href="findAtmBranches.php" aria-current="page" class="nav-link w-nav-link w--current">
                         Branches & Atms
                     </a>
                     <div class="nav-menu-button-wrapper">
-                        <a href="#" class="button-primary w-button">Open account</a>
+                        <a href="signup.php" class="button-primary w-button">Open account</a>
                     </div>
                 </nav>
             </div>
@@ -26,23 +29,12 @@
                 <div class="menu-btn" onclick="togglemenu()">
                     <div class="menu-btn__burger"></div>
                 </div>
-                <a href="#"  class="button-secondary v w-button">Open account</a>
+                <a href="signup.php"  class="button-secondary v w-button" style="text-decoration: none;">Open account</a>
             </div>
         </div>
     </div>
-    <script src="../JS/main.js"></script>
-    <script src="../JS/nav.js"></script>
-    <script>
-        var menuList = document.getElementById("menuList");
-        menuList.style.maxHeight = "0px";
-        function togglemenu() {
-            if(menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "550px";
-                menuList.style.boxShadow = "0 6px 4px -4px rgba(19, 1, 2, 0.18)";
-            }
-            else {
-                menuList.style.maxHeight = "0px";
-                menuList.style.boxShadow = "none"
-            }
-        }
-    </script>
+
+    <script src="JS/main.js"></script>
+    <script src="JS/nav.js"></script>
+    <script src="JS/nav2.js"></script>
+    

@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" style="margin-top: 43px;">
     <div class="container-default-1310px">
         <div class="w-layout-grid footer-grid">
             <div class="footer-column-1">
@@ -34,13 +34,13 @@
                 </div>
                 <ul role="list" class="footer-nav">
                     <li class="footer-nav-item">
-                        <a href="#" aria-current="page" class="nav-lin footer w--current">Home</a>
+                        <a href="index.php" aria-current="page" class="nav-lin footer w--current">Home</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="#" class="nav-lin footer">About Us</a>
+                        <a href="aboutus.php" class="nav-lin footer">About Us</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="#" class="nav-lin footer">Policies</a>
+                        <a href="services.php" class="nav-lin footer">Services</a>
                     </li>
                     <li class="footer-nav-item">
                         <a href="#" class="nav-lin footer">Branches & Atms</a>
