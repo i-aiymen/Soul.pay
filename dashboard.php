@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION["user_id"])){
+  header("location: index.php");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,81 +65,88 @@
 </head>
 
 <body>
-  <div class="container" id="blur">
-    <div class="l-navbar" id="navbar">
-      <nav class="nav">
-        <div>
-          <a href="#" class="nav__logo">
-            <img src="logo.svg" alt="" class="nav__logo-icon">
-            <span class="nav__logo-text">Soul.pay</span>
-          </a>
+  <?php
+  if ($_SESSION["verified"] == false) {
+    echo "<div class=\"container show1\" id=\"blur\">";
+  } else {
+    echo "<div class=\"container\" id=\"blur\">";
+  }
+  ?>
 
-          <div class="nav__toggle" id="nav-toggle">
-            <i class='bx bx-chevron-left sidebarBtn'></i>
-          </div>
-
-          <ul class="nav__list">
-            <a href="#" class="nav__link active">
-              <i class='bx bx-grid-alt nav__icon'></i>
-              <span class="nav__text">Home</span>
-            </a>
-            <div class="nav__link nav__link1 collapse">
-              <i class='bx bx-transfer nav__icon'></i>
-              <span class="nav__text">Transfer Funds</span>
-
-              <i class='bx bx-sm bx-chevron-down collapse__link'></i>
-
-              <ul class="collapse__menu">
-                <a href="#" class="collapse__sublink" id="open" onclick="toggle()">Soul Accounts</a>
-                <a href="#" class="collapse__sublink" onclick="toggle1()">Other Accounts</a>
-              </ul>
-            </div>
-            <a href="#" class="nav__link">
-              <i class='bx bx-history nav__icon'></i>
-              <span class="nav__text">History</span>
-            </a>
-            <a href="#" class="nav__link" id="myProfile">
-              <i class='bx bx-user nav__icon'></i>
-              <span class="nav__text">My Profile</span>
-            </a>
-            <a href="#" class="nav__link">
-              <i class='bx bxs-phone nav__icon'></i>
-              <span class="nav__text">Customer Service</span>
-            </a>
-            <a href="#" class="nav__link" id="debitCard">
-              <i class='bx bxs-credit-card nav__icon'></i>
-              <span class="nav__text">Debit Card Services</span>
-            </a>
-          </ul>
-        </div>
-        <a href="#" class="nav__link">
-          <i class='bx bx-log-out-circle nav__icon'></i>
-          <span class="nav__text">Log out</span>
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav__logo">
+          <img src="logo.svg" alt="" class="nav__logo-icon">
+          <span class="nav__logo-text">Soul.pay</span>
         </a>
-      </nav>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-chevron-left sidebarBtn'></i>
+        </div>
+
+        <ul class="nav__list">
+          <a href="#" class="nav__link active">
+            <i class='bx bx-grid-alt nav__icon'></i>
+            <span class="nav__text">Home</span>
+          </a>
+          <div class="nav__link nav__link1 collapse">
+            <i class='bx bx-transfer nav__icon'></i>
+            <span class="nav__text">Transfer Funds</span>
+
+            <i class='bx bx-sm bx-chevron-down collapse__link'></i>
+
+            <ul class="collapse__menu">
+              <a href="#" class="collapse__sublink" id="open" onclick="toggle()">Soul Accounts</a>
+              <a href="#" class="collapse__sublink" onclick="toggle1()">Other Accounts</a>
+            </ul>
+          </div>
+          <a href="#" class="nav__link">
+            <i class='bx bx-history nav__icon'></i>
+            <span class="nav__text">History</span>
+          </a>
+          <a href="#" class="nav__link" id="myProfile">
+            <i class='bx bx-user nav__icon'></i>
+            <span class="nav__text">My Profile</span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class='bx bxs-phone nav__icon'></i>
+            <span class="nav__text">Customer Service</span>
+          </a>
+          <a href="#" class="nav__link" id="debitCard">
+            <i class='bx bxs-credit-card nav__icon'></i>
+            <span class="nav__text">Debit Card Services</span>
+          </a>
+        </ul>
+      </div>
+      <a href="#" class="nav__link">
+        <i class='bx bx-log-out-circle nav__icon'></i>
+        <span class="nav__text">Log out</span>
+      </a>
+    </nav>
+  </div>
+
+
+  <section class="home-section">
+    <nav>
+      <div class="date">
+        25-05-2021
+      </div>
+      <div class="auto_logout">
+        Auto logout in 9:45
+      </div>
+      <div class="logout">
+        <ul>
+          <li><a href="#"><i class="fas fa-bell"></i></a></li>
+          <li><a href="#"><i class="fas fa-power-off power"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="home-content" id="home-content">
     </div>
 
-
-    <section class="home-section">
-      <nav>
-        <div class="date">
-          25-05-2021
-        </div>
-        <div class="auto_logout">
-          Auto logout in 9:45
-        </div>
-        <div class="logout">
-          <ul>
-            <li><a href="#"><i class="fas fa-bell"></i></a></li>
-            <li><a href="#"><i class="fas fa-power-off power"></i></a></li>
-          </ul>
-        </div>
-      </nav>
-
-        <div class="home-content" id="home-content">
-        </div>
-
-    </section>
+  </section>
   </div>
 
   <div class="modal-container mod" id="modal_container">
@@ -188,7 +202,7 @@
 
     </div>
   </div>
-  
+
   <div class="modal-container" id="modal_container1">
     <div class="modal">
       <button id="close1" onclick="toggle1()" class="cross">
@@ -246,7 +260,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="modal-container" id="modal_container2">
     <div class="modal">
       <button id="close1" onclick="toggle2()" class="cross">
@@ -263,45 +277,62 @@
         <h2>Apply For New Card</h2>
         <div class="form" id="debitform">
 
-        <div class="card-transaction space icon-relative debit">
-          <label class="label">Pick card type:<span style="color: red;">*</span></label>
-          <div class="card-types">
-            <input type="radio" name="cardtype" value="visa" class="card-type selected" checked><i class="fab fa-cc-visa"></i></input>
-            <input type="radio" name="cardtype" value="paypal" class="card-type"><i class="fab fa-cc-paypal"></i></input>
-            <input type="radio" name="cardtype" value="mastercard" class="card-type"><i class="fab fa-cc-mastercard"></i></input>
-            <input type="radio" name="cardtype" value="amex" class="card-type"><i class="fab fa-cc-amex"></i></input>
+          <div class="card-transaction space icon-relative debit">
+            <label class="label">Pick card type:<span style="color: red;">*</span></label>
+            <div class="card-types">
+              <input type="radio" name="cardtype" value="visa" class="card-type selected" checked><i class="fab fa-cc-visa"></i></input>
+              <input type="radio" name="cardtype" value="paypal" class="card-type"><i class="fab fa-cc-paypal"></i></input>
+              <input type="radio" name="cardtype" value="mastercard" class="card-type"><i class="fab fa-cc-mastercard"></i></input>
+              <input type="radio" name="cardtype" value="amex" class="card-type"><i class="fab fa-cc-amex"></i></input>
+            </div>
+          </div>
+          <label class="label">Set Delivery Address:</label>
+          <div class="debit-address">
+            <div class="card-transaction space icon-relative" id="debit-details">
+              <label class="label">House No: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="house" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">Street: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="street" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">District: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="district" onkeypress="return /[a-z]/i.test(event.key)" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">State: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="state" onkeypress="return /[a-z]/i.test(event.key)" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">Pin Code: <span style="color: red;">*</span></label>
+              <input type="number" class="input" name="pincode" onKeyPress="if(this.value.length==6) return false;" required>
+            </div>
+          </div>
+          <div class="btn" onclick="submit();">
+            Confirm Application
           </div>
         </div>
-        <label class="label">Set Delivery Address:</label>
-        <div class="debit-address">
-          <div class="card-transaction space icon-relative" id="debit-details">
-            <label class="label">House No: <span style="color: red;">*</span></label>
-            <input type="text" class="input" name="house"  required>
-          </div>
-          <div class="card-transaction space icon-relative">
-            <label class="label">Street: <span style="color: red;">*</span></label>
-            <input type="text" class="input" name="street"  required>
-          </div>
-          <div class="card-transaction space icon-relative">
-            <label class="label">District: <span style="color: red;">*</span></label>
-            <input type="text" class="input" name="district" onkeypress="return /[a-z]/i.test(event.key)" required>
-          </div>
-          <div class="card-transaction space icon-relative">
-            <label class="label">State: <span style="color: red;">*</span></label>
-            <input type="text" class="input" name="state" onkeypress="return /[a-z]/i.test(event.key)" required>
-          </div>
-          <div class="card-transaction space icon-relative">
-            <label class="label">Pin Code: <span style="color: red;">*</span></label>
-            <input type="number" class="input" name="pincode" onKeyPress="if(this.value.length==6) return false;" required>
-          </div>
-        </div>
-        <div class="btn" onclick="submit();">
-          Confirm Application
-        </div>
-      </div>
       </form>
     </div>
   </div>
+
+  <?php
+  if ($_SESSION["verified"] == false) {
+    echo "<div class=\"modal-container show1\" id=\"modal_container3\">
+    <div class=\"modal\">
+      <form action=\"verification.php\" id=\"debitAppln\">
+        <h2>Please verify your identity before you can avail our services!</h2>
+        <div class=\"form\" id=\"verifyprompt\">
+          <a href=\"verification.php\" id=\"apply-debit\">
+          <span class=\"nav__text\">Get Verified</span>
+      </a>
+      </div>
+      </form>
+    </div>
+  </div>";
+  }
+  ?>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

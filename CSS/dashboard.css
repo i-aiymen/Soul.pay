@@ -899,3 +899,14 @@ input[type=number] {
 .debit-address .input{
   padding: 8px 0 8px;
 }
+
+#modal_container3 > .modal{
+width: 41rem;
+}
+#verifyprompt{
+  display: flex;
+  justify-content: center;
+}
+#modal_container3 a{
+width: 7.7rem;
+}
