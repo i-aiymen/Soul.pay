@@ -130,47 +130,6 @@
       </nav>
 
         <div class="home-content" id="home-content">
-          <div class="profile">
-            <div class="profile personal">
-              <div class="section-title">
-                <div class="title-text">Debit Cards</div>
-              </div>
-              <i class="fas fa-credit-card" id="cr-card-logo"></i>
-              <div class="display-cards">
-                Current Active Cards:
-                <div class="card">
-                  <div class="card__front card__part">
-                    <i class="fas fa-sim-card fa-rotate-270"></i>
-                    <img class="card__front-logo card__logo" src="Assets/Images/visa-seeklogo.com.svg">
-                    <p class="card_numer">**** **** **** 6258</p>
-                    <div class="card__space-75">
-                      <span class="card__label">Card holder</span>
-                      <p class="card__info">John Doe</p>
-                    </div>
-                    <div class="card__space-25">
-                      <span class="card__label">Expires</span>
-                      <p class="card__info">10/25</p>
-                    </div>
-                  </div>
-
-                  <div class="card__back card__part">
-                    <div class="card__black-line"></div>
-                    <div class="card__back-content">
-                      <div class="card__secret">
-                        <p class="card__secret--last">420</p>
-                      </div>
-                      <img class="card__back-square card__square" src="Assets/Images/PureSoul.svg">
-                      <img class="card__back-logo card__logo" src="Assets/Images/visa-seeklogo.com.svg">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="#" id="apply-debit" onclick="toggle2();">
-                <span class="nav__text">Apply For New</span>
-              </a>
-            </div>
-          </div>
         </div>
 
     </section>
@@ -317,11 +276,11 @@
         <div class="debit-address">
           <div class="card-transaction space icon-relative" id="debit-details">
             <label class="label">House No: <span style="color: red;">*</span></label>
-            <input type="text" class="input" name="house" onkeypress="return /[a-z]/i.test(event.key)" required>
+            <input type="text" class="input" name="house"  required>
           </div>
           <div class="card-transaction space icon-relative">
             <label class="label">Street: <span style="color: red;">*</span></label>
-            <input type="text" class="input" name="street" onkeypress="return /[a-z]/i.test(event.key)" required>
+            <input type="text" class="input" name="street"  required>
           </div>
           <div class="card-transaction space icon-relative">
             <label class="label">District: <span style="color: red;">*</span></label>
@@ -343,44 +302,6 @@
       </form>
     </div>
   </div>
-  <!-- <div class="modal-container" id="modal_container3">
-    <div class="modal">
-      <button id="close1" onclick="toggle3()" class="cross">
-        <svg data-testid="test-svg" width="14" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g id="Artboard-Copy-43" transform="translate(-5.000000, -5.000000)">
-            <g id="close">
-              <path d="M5.57098982,5.65032324 C5.78968342,5.43162963 6.14425581,5.43162963 6.36294941,5.65032324 L6.36294941,5.65032324 L11.9059696,11.194303 L17.450383,5.65032324 C17.6447773,5.45592892 17.9465326,5.43432955 18.1647849,5.58552513 L18.2423426,5.65032324 C18.4610362,5.86901684 18.4610362,6.22358923 18.2423426,6.44228283 L18.2423426,6.44228283 L12.6979696,11.985303 L18.2423426,17.5297164 C18.4367369,17.7241107 18.4583363,18.025866 18.3071407,18.2441184 L18.2423426,18.321676 C18.023649,18.5403696 17.6690766,18.5403696 17.450383,18.321676 L17.450383,18.321676 L11.9059696,12.777303 L6.36294941,18.321676 C6.1685551,18.5160703 5.86679977,18.5376697 5.64854745,18.3864741 L5.57098982,18.321676 C5.35229621,18.1029824 5.35229621,17.74841 5.57098982,17.5297164 L5.57098982,17.5297164 L11.1149696,11.985303 L5.57098982,6.44228283 C5.3765955,6.24788852 5.35499614,5.94613319 5.50619171,5.72788087 Z" id="Combined-Shape"></path>
-            </g>
-          </g>
-        </svg>
-      </button>
-
-      <h2>Apply For New Card</h2>
-      <div class="form">
-
-        <div class="card-transaction space icon-relative debit">
-          <label class="label">Pick card type:<span style="color: red;">*</span></label>
-          <div class="card-types">
-            <radio radio="card-type" value="visa" class="card-type selected"><i class="fab fa-cc-visa"></i></radio>
-            <radio radio="card-type" value="paypal" class="card-type"><i class="fab fa-cc-paypal"></i></radio>
-            <radio radio="card-type" value="mastercard" class="card-type"><i class="fab fa-cc-mastercard"></i></radio>
-            <radio radio="card-type" value="amex" class="card-type"><i class="fab fa-cc-amex"></i></radio>
-          </div>
-        </div>
-        <label class="label">Set Delivery Address:</label>
-        <div class="debit-address">
-          
-        </div>
-        <div class="btn" onclick="toggle3();">
-          Confirm Application
-        </div>
-
-      </div>
-    </div>
-  </div> -->
-  
-  
-
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

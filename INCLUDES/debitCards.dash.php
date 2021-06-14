@@ -1,5 +1,19 @@
 <?php
-    echo "<div class=\"home-content\" id=\"home-content\">
+  session_start();
+  require_once("dbconfig.inc.php");
+  $sql = "select user_firstname, user_lastname from users where user_id=?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $_SESSION["user_id"]);
+    mysqli_stmt_execute($stmt);
+    $resultData = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($resultData);
+
+  echo "<div class=\"home-content\" id=\"home-content\">
     <div class=\"profile\">
       <div class=\"profile personal\">
         <div class=\"section-title\">
@@ -15,7 +29,7 @@
               <p class=\"card_numer\">**** **** **** 6258</p>
               <div class=\"card__space-75\">
                 <span class=\"card__label\">Card holder</span>
-                <p class=\"card__info\">John Doe</p>
+                <p class=\"card__info\">".$row["user_firstname"]." ".$row["user_lastname"]."</p>
               </div>
               <div class=\"card__space-25\">
                 <span class=\"card__label\">Expires</span>
