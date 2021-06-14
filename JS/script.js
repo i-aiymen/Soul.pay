@@ -14,6 +14,13 @@ function colorLink(){
 
 linkColor.forEach(l => l.addEventListener('click', colorLink));
 
+const cardColor = document.querySelectorAll('.card-type');   
+function colorCard(){
+    cardColor.forEach(l => l.classList.remove('selected'));
+    this.classList.add('selected');
+}
+
+cardColor.forEach(l => l.addEventListener('click', colorCard));
 
 
 

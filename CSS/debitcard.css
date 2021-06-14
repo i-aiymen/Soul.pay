@@ -139,8 +139,10 @@
   
   .card__back-square {
       position: absolute;
-      bottom: 15px;
-      left: 15px;
+      bottom: 6px;
+      left: 8px;
+      width: 64px;
+      height: 64px;
   }
     
   .card:hover .card__front {
