@@ -140,13 +140,25 @@ function loginUser($conn, $email, $pwd)
         exit();
     } 
     else if ($checkPwd === true) {
-        session_start();
-        $_SESSION["user_email"] = $usrExists["user_email"];
-        $_SESSION["user_id"] = $usrExists["user_id"];
-        $_SESSION["user_lastname"] = $usrExists["user_lastname"];
-        $_SESSION["user_firstname"] = $usrExists["user_firstname"];
-        $_SESSION["user_phone"] = $usrExists["user_phone"];
-        header("location: ../dashboard.php");
-        exit();
+
+        if($usrExists["user_dob"]==NULL){
+            session_start();
+            $_SESSION["user_email"] = $usrExists["user_email"];
+            $_SESSION["user_id"] = $usrExists["user_id"];
+            $_SESSION["user_lastname"] = $usrExists["user_lastname"];
+            $_SESSION["user_firstname"] = $usrExists["user_firstname"];
+            $_SESSION["user_phone"] = $usrExists["user_phone"];
+            $_SESSION["verified"]=false;
+            header("location: ../dashboard.php");
+            exit();
+        }
+        else{
+            session_start();
+            $_SESSION["user_email"] = $usrExists["user_email"];
+            $_SESSION["user_id"] = $usrExists["user_id"];
+            $_SESSION["verified"]=true;
+            header("location: ../dashboard.php");
+            exit();
+        }
     }
 }

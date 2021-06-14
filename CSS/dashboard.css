@@ -848,3 +848,65 @@ cursor: pointer;
   width: 25%;
   
 }
+
+.card-types{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.card-types a{
+  cursor: pointer;
+}
+
+.card-type.selected{
+  border-radius: 14px;
+  padding: 0 3px 0 3px;
+  border: red 2px solid;
+}
+
+.fa-cc-visa{
+  color: #211273;
+}
+.fa-cc-amex{
+  color: #bb9300;
+}
+.fa-cc-mastercard{
+  color: #cc1300;
+} 
+.fa-cc-paypal{
+  color: #00a232;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.debit-address{
+  padding-bottom: 0.5rem;
+}
+
+.debit-address .input{
+  padding: 8px 0 8px;
+}
+
+#modal_container3 > .modal{
+width: 41rem;
+}
+#verifyprompt{
+  display: flex;
+  justify-content: center;
+}
+#modal_container3 a{
+width: 7.7rem;
+}
