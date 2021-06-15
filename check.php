@@ -140,7 +140,7 @@ if(!isset($_SESSION["user_email"]))
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
 
-                if (strpos($q, 'soul') !== false) 
+                if (strpos($q, 'SOUL') !== false) 
                 {
                     $sql1 = "select date_transfer, _from_customer_lastname, 
                             _from_customer_ifsc, _to_customer_lastname,
