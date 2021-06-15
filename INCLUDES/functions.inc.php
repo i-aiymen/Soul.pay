@@ -91,7 +91,7 @@ function createUser($conn, $fname, $lname, $email, $phone, $pwd)
 
 function verifyUser($conn,$verifyArr,$userid)
 {   
-    $sql = "update users SET `user_firstname` = ?, `user_lastname` = ?, `user_dob`= ?, `user_email`= ?, `user_phone`= ?, `user_aadharno`= ?, `user_pin`= ?, `user_balance`= 5000, `user_nationality`= ?, `user_houseno`= ?, `use_street`= ?, `user_district`= ?, `user_state`= ?, `user_accountstate`= 'block', `user_aadharfrontname`= ?, `user_aadharfrontsize`= ?, `user_aadharbackname`= ?, `user_aadharbacksize`= ?, `user_pincode`= ?, `user_accountno`= ?, `user_ifsc`= ? WHERE `users`.`user_id` = ?;";
+    $sql = "update users SET `user_firstname` = ?, `user_lastname` = ?, `user_dob`= ?, `user_email`= ?, `user_phone`= ?, `user_aadharno`= ?, `user_pin`= ?, `user_nationality`= ?, `user_houseno`= ?, `use_street`= ?, `user_district`= ?, `user_state`= ?, `user_aadharfrontname`= ?, `user_aadharfrontsize`= ?, `user_aadharbackname`= ?, `user_aadharbacksize`= ?, `user_pincode`= ?, `user_accountno`= ?, `user_ifsc`= ? WHERE `users`.`user_id` = ?;";
     
     // update users SET `user_firstname` = 'Manu', `user_lastname` = 'Jasan', `user_dob`= '10-09-2000', `user_email`= 'manujasan23@gmail.com', `user_phone`= 3838383838, `user_aadharno`= 939393938281, `user_pin`= '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', `user_balance`= 5000, `user_nationality`= 'India', `user_houseno`= '23', `use_street`= 'what', `user_district`= 'kottayam', `user_state`= 'kerala', `user_accountstate`= 'BLOCKED', `user_aadharfrontname`= 'mike', `user_aadharfrontsize`= 38383, `user_aadharbackname`= 'mdj', `user_aadharbacksize`= 328282, `user_pincode`= 38383, `user_accountno`= 3333838 WHERE `users`.`user_id` = 9;
 

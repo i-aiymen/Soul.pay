@@ -64,6 +64,14 @@ input[type=number] {
 .fa-exclamation-circle{
     color: red;
     font-size: 1.5rem;
+    position: relative;
+    top: 4px;
+}
+.fa-check-circle{
+    color: rgb(14, 206, 14);
+    font-size: 1.5rem;
+    position: relative;
+    top: 4px;
 }
 label{
     display: block;

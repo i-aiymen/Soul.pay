@@ -26,9 +26,14 @@
             </div>
             <div class="open-account-box maxw">
             <?php
-                function showerror($message){
+                function showerror($message,$type="error"){
                     echo "<div class=\"errorbox\">";
-                        echo "<i class=\"fas fa-exclamation-circle\"></i>";
+                        if($type=="error"){
+                            echo "<i class=\"fas fa-exclamation-circle\"></i>";
+                        }
+                        else {
+                            echo "<i class=\"fas fa-check-circle\"></i>";
+                        }
                         echo "<p>".$message."</p>";
                     echo "</div>";
                 }
@@ -38,10 +43,10 @@
                     showerror("You haven't registered!");
                 }
                 else if($error == 'vnone'){
-                    showerror("Your Account is being verified!");
+                    showerror("Your Account is being verified!","success");
                 }
                 else if($error == 'none'){
-                    showerror("Signup Success!");
+                    showerror("Signup Success!","success");
                 }
                 else if($error == 'wrongpass'){
                     showerror("Wrong Password!");

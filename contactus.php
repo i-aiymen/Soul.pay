@@ -32,7 +32,11 @@
     <div class="x">
     <div style="opacity: 1; transform-style: preserve-3d;" class="contact-us-form">
         <div class="success-message-content w-form">
+<<<<<<< HEAD
             <form action="" method="post" class="form-v2">
+=======
+            <form action="contact_get.php" method="POST" id="email-form" name="email-form" data-name="Email Form" class="form-v2">
+>>>>>>> 218768821029763f4af67bd0036d99f93b40cff6
                 <div class="contact-us-form-grid">
                     <div class="form-input-wrapper">
                         <label for="Name" class="field-label">Name</label>

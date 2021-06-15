@@ -63,7 +63,11 @@ if (class_exists('DATABASE_CONNECT'))
         $accountno = $row['user_accountno'];
         $ifsc      = $row['user_ifsc'];
 
+<<<<<<< HEAD
         $sql2 = "select user_balance, user_accounttype from accounts where user_email = '$email'";
+=======
+        $sql2 = "select user_balance,user_accounttype from accounts where user_email = '$email'";
+>>>>>>> 218768821029763f4af67bd0036d99f93b40cff6
         $result2 = $conn->query($sql2);
         $row2 = $result2->fetch_assoc();
 
@@ -167,7 +171,9 @@ if (class_exists('DATABASE_CONNECT'))
                 <div class="right-side right1">
                     
                     <div class="box-topic">Your Balance</div>
-                    <div class="number"><?php echo $row2['user_balance']?></div>
+                    <div class="number">
+                      <?php if(!empty($row2['user_balance'])) {echo $row2['user_balance'];}?>
+                    </div>
 
                 </div>
                 <i class='bx bx-rupee rupee'></i>
@@ -175,7 +181,18 @@ if (class_exists('DATABASE_CONNECT'))
                 <div class="box">
                 <div class="right-side right2">
                     <div class="box-topic">Account Status</div>
+<<<<<<< HEAD
                     <div class="number"><?php echo $row2['user_accounttype'] ?></div>
+=======
+                    <div class="number">
+                      <?php if(!empty($row2['user_balance'])) 
+                                { 
+                                  if($row2['user_accounttype']=="block")
+                                  echo "Blocked";
+                                }
+                      ?>
+                    </div>
+>>>>>>> 218768821029763f4af67bd0036d99f93b40cff6
 
                 </div>
                 <i class='bx bx-user-circle rupee two'></i>
