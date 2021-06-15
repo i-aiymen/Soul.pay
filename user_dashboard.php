@@ -167,7 +167,9 @@ if (class_exists('DATABASE_CONNECT'))
                 <div class="right-side right1">
                     
                     <div class="box-topic">Your Balance</div>
-                    <div class="number"><?php echo $row2['user_balance']?></div>
+                    <div class="number">
+                      <?php if(!empty($row2['user_balance'])) {echo $row2['user_balance'];}?>
+                    </div>
 
                 </div>
                 <i class='bx bx-rupee rupee'></i>
