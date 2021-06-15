@@ -28,7 +28,7 @@
                 $services = $_POST['Services'];
                 $message  = $_POST['Message'];
 
-                $sql = "insert into contactform(Name, Phone, Email, Services, Message)
+                $sql = "insert into contactform (Name, Phone, Email, Service, Message)
                         values('$name', '$phone', '$email', '$services', '$message')";
                 $result = $conn->query($sql);
 
@@ -41,8 +41,8 @@
                 }
                 else
                 {
-                    echo '<script type="text/javascript">alert("Your message is not submitted!");
-                            </script>';
+                    echo "<script type=\"text/javascript\">alert(\"Your message is not submitted! \");
+                            </script>"; //sql=".$conn -> error.
                     echo ("<script>location.href='index.php'</script>");
                     exit;
                 }
