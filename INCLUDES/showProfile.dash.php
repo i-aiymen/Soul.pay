@@ -32,14 +32,6 @@
                             <span class=\"field-title\">DOB:</span>
                             <span class=\"field-value\">".$row["user_dob"]."</span>
                         </div>
-                        <div class=\"field last-field\">
-                            <span class=\"field-title\">Account Number:</span>
-                            <span class=\"field-value\">".$accountno."</span>
-                        </div>
-                        <div class=\"field last-field\">
-                            <span class=\"field-title\">IFSC:</span>
-                            <span class=\"field-value\">".$row["user_ifsc"]."</span>
-                        </div>
                         <div class=\"field\">
                             <span class=\"field-title\">Aadhar:</span>
                             <span class=\"field-value\">".$row["user_aadharno"]."</span>
@@ -47,6 +39,10 @@
                         <div class=\"field\">
                             <span class=\"field-title\">Customer Since:</span>
                             <span class=\"field-value\">".$date."</span>
+                        </div>
+                        <div class=\"field last-field\">
+                            <span class=\"field-title\">Account Number:</span>
+                            <span class=\"field-value\">".$accountno."</span>
                         </div>
                     </div>
                 </div>

@@ -25,18 +25,14 @@
     <div style="opacity: 1;" class="sufix-line"></div>
      <h2 style="opacity: 1;" class="head">Get in touch with us<span class="span-primary-color">.</span></h2><p style="opacity: 1;" class="left-paragraph">Want to get in touch? We'd love to hear from you.<br>Here's how you can reach us...</p><br>
      <div class="contact-us-wrapper">
-        <div style="opacity: 1;" class="contact-wrapper"><div class="contact-us-subtitle-wrapper"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7809af2769e57aa63a66f_icon-contact-us-01-banca-template.svg" alt="" class="contact-us-icon"><div class="contact-us-subtitle">Office</div></div><p>1550 Bryant Street STE 750, San Francisco, CA 94103</p></div><div style="opacity: 1;" class="contact-wrapper"><div class="contact-us-subtitle-wrapper"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7809a6f8dd21f3b5fd77d_icon-contact-us-02-banca-template.svg" alt="" class="contact-us-icon"><div class="contact-us-subtitle">Contact</div></div><a href="mailto:support@banca.com" class="contact-us-link">support@soul.pay.com</a><a href="mailto:info@soul.pay.com" class="contact-us-link">info@soul.pay.com</a></div><div  style="opacity: 1;" class="contact-wrapper"><div class="contact-us-subtitle-wrapper"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7809a3d52efaf6a491924_icon-contact-us-03-banca-template.svg" alt="" class="contact-us-icon"><div class="contact-us-subtitle">Open Hours</div></div><p class="open-hours-paragraph">Monday - Saturday: 9am - 7pm</p><p class="open-hours-paragraph">Sunday: 12am — 6pm</p></div></div>
+        <div style="opacity: 1;" class="contact-wrapper"><div class="contact-us-subtitle-wrapper"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7809af2769e57aa63a66f_icon-contact-us-01-banca-template.svg" alt="" class="contact-us-icon"><div class="contact-us-subtitle">Office</div></div><p>Soul Towers, TVM, Street 750, Kerala, 456765</p></div><div style="opacity: 1;" class="contact-wrapper"><div class="contact-us-subtitle-wrapper"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7809a6f8dd21f3b5fd77d_icon-contact-us-02-banca-template.svg" alt="" class="contact-us-icon"><div class="contact-us-subtitle">Contact</div></div><a href="mailto:support@banca.com" class="contact-us-link">soul.payy@gmail.com</a><a href="mailto:info@soul.pay.com" class="contact-us-link">info@soul.pay.com</a></div><div  style="opacity: 1;" class="contact-wrapper"><div class="contact-us-subtitle-wrapper"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7809a3d52efaf6a491924_icon-contact-us-03-banca-template.svg" alt="" class="contact-us-icon"><div class="contact-us-subtitle">Open Hours</div></div><p class="open-hours-paragraph">Monday - Saturday: 9am - 7pm</p><p class="open-hours-paragraph">Sunday: 12am — 6pm</p></div></div>
 
 </div>
 <div class="b">
     <div class="x">
     <div style="opacity: 1; transform-style: preserve-3d;" class="contact-us-form">
         <div class="success-message-content w-form">
-<<<<<<< HEAD
             <form action="" method="post" class="form-v2">
-=======
-            <form action="contact_get.php" method="POST" id="email-form" name="email-form" data-name="Email Form" class="form-v2">
->>>>>>> 218768821029763f4af67bd0036d99f93b40cff6
                 <div class="contact-us-form-grid">
                     <div class="form-input-wrapper">
                         <label for="Name" class="field-label">Name</label>
@@ -44,7 +40,7 @@
                     </div>
                     <div class="form-input-wrapper">
                         <label for="Phone" class="field-label">Phone</label>
-                        <input type="tel" class="input w-input" name="Phone" placeholder="(123) 480 - 3540" id="Phone">
+                        <input type="tel" class="input w-input" name="Phone" placeholder="+91 xxxxxxxxxx" id="Phone">
                     </div>
                     <div class="form-input-wrapper">
                         <label for="Email" class="field-label">Email</label>

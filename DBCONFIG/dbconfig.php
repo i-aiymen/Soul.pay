@@ -8,7 +8,7 @@
         {
             $this->connect[0] = "127.0.0.1";
             $this->connect[1] = "root";
-            $this->connect[2] = "";
+            $this->connect[2] = "almaas03";
             $this->connect[3] = "banking";
         }
 
