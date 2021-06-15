@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 08:44 PM
+-- Generation Time: Jun 15, 2021 at 12:38 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -45,13 +45,6 @@ CREATE TABLE `accounts` (
   `otp` varchar(4) NOT NULL,
   `otptime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `accounts`
---
-
-INSERT INTO `accounts` (`user_id`, `date_opened`, `currency`, `user_email`, `user_lastname`, `user_firstname`, `user_accountno`, `user_ifsc`, `limit_per_day_transfer`, `amounts_transferred`, `amounts_from_reserve`, `amounts_from_others`, `user_balance`, `user_accounttype`, `otp`, `otptime`) VALUES
-(15, '2021-06-14 16:09:32', 'Rs', 'aiymenarbaaz03@gmail.com', 'Arbaaz', 'Muhammed', '228282843', 'SOUL0000844', '20000', '1000', '20', '', 5000, 'active', '', '2021-06-14 23:09:28');
 
 -- --------------------------------------------------------
 
@@ -2390,7 +2383,7 @@ CREATE TABLE `other_bank` (
 --
 
 INSERT INTO `other_bank` (`ID`, `Name`, `Account_no`, `IFSC`, `Amount_from_others`, `Balance`) VALUES
-(1, 'Binuraj', 987567345, 'FDRL0004566', 0, 5600),
+(1, 'Binuraj', 987567345, 'FDRL0004566', 1000, 6600),
 (2, 'Vipin', 587677345, 'SIBL0002366', 0, 10000),
 (3, 'Kailas', 786667345, 'SBIN0000264', 0, 3500);
 
@@ -2502,28 +2495,20 @@ CREATE TABLE `users` (
   `user_pin` varchar(260) DEFAULT NULL,
   `user_aadharno` varchar(13) NOT NULL,
   `user_accountno` varchar(100) NOT NULL,
-  `user_balance` float DEFAULT NULL,
   `user_ifsc` varchar(15) DEFAULT NULL,
   `user_nationality` varchar(100) DEFAULT NULL,
   `user_houseno` varchar(50) DEFAULT NULL,
   `use_street` varchar(50) DEFAULT NULL,
   `user_district` varchar(50) DEFAULT NULL,
   `user_state` varchar(50) DEFAULT NULL,
+  `user_accountstate` varchar(20) NOT NULL,
   `user_creation` timestamp NULL DEFAULT current_timestamp(),
-  `user_accountstate` varchar(50) DEFAULT NULL,
   `user_aadharfrontname` varchar(200) DEFAULT NULL,
   `user_aadharfrontsize` bigint(20) DEFAULT NULL,
   `user_aadharbackname` varchar(200) DEFAULT NULL,
   `user_aadharbacksize` bigint(20) DEFAULT NULL,
   `user_pincode` int(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`user_id`, `user_firstname`, `user_lastname`, `user_dob`, `user_phone`, `user_email`, `user_pwd`, `user_pin`, `user_aadharno`, `user_accountno`, `user_balance`, `user_ifsc`, `user_nationality`, `user_houseno`, `use_street`, `user_district`, `user_state`, `user_creation`, `user_accountstate`, `user_aadharfrontname`, `user_aadharfrontsize`, `user_aadharbackname`, `user_aadharbacksize`, `user_pincode`) VALUES
-(15, 'Muhammed', 'Arbaaz', '2021-06-16', '7034297953', 'aiymenarbaaz03@gmail.com', '$2y$10$2b.PNXwzmQKK9d.5zQH5h.WgyPFkGwgI8i2QYA//9py421nWZBJRG', '$2y$10$4XFR6WNuIGJvQO/zLbABOejPvcVNOiV3/jdQU81cD/SL/yzfhVg2C', '2147483647', '228282843', 5000, 'SOUL0000844', 'INDIA', '543', 'Uliyil', 'Kannur', 'Kerala', '2021-06-14 16:07:54', 'active', 'Screenshot (268).png', 39275, 'Screenshot (269).png', 33723, 670702);
 
 --
 -- Indexes for dumped tables
@@ -2603,13 +2588,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contactform`
 --
 ALTER TABLE `contactform`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `debitcard`
 --
 ALTER TABLE `debitcard`
-  MODIFY `debit_request` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `debit_request` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `other_bank`
@@ -2621,31 +2606,31 @@ ALTER TABLE `other_bank`
 -- AUTO_INCREMENT for table `soulbank_reserve`
 --
 ALTER TABLE `soulbank_reserve`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `transactions_all`
 --
 ALTER TABLE `transactions_all`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `transactions_other_bank`
 --
 ALTER TABLE `transactions_other_bank`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `transactions_soul_bank`
 --
 ALTER TABLE `transactions_soul_bank`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
