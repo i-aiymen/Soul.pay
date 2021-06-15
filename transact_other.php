@@ -54,6 +54,17 @@
                     $sql = "update accounts set otp = '$otp', otptime = NOW() where user_email = '$email'";
                     $result = $conn->query($sql);
 
+                    $sql2 = "select user_accounttype from accounts where user_email = '$email'";
+                    $result2 = $conn->query($sql2);
+                    $row2 = $result2->fetch_assoc();
+                    if($row2['user_accounttype'] == 'block')
+                    {
+                        echo '<script type="text/javascript">alert("Your account is not activated. Try again later");
+                        </script>';
+                        echo ("<script>location.href='user_dashboard.php'</script>");
+                        exit;
+                    }
+
                     if ($result == true)
                     {    
 

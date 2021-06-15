@@ -33,8 +33,8 @@ if(!isset($_SESSION["user_email"]))
                 $account_no                =   $_POST['account_no'];
                 $reason                    =   $_POST['reason'];
                 $main_amount               =   $_POST['main_amount'];
-                $otp                    =   $_POST['otp'];
-                $email = $_SESSION["user_email"];
+                $otp                       =   $_POST['otp'];
+                $email                     =   $_SESSION["user_email"];
 
 
 

@@ -75,7 +75,7 @@ function pwdStrength($pwd)
 
 function createUser($conn, $fname, $lname, $email, $phone, $pwd)
 {
-    $sql = "insert into users (user_firstname,user_lastname,user_email,user_phone,user_pwd,user_accountstate) values(?,?,?,?,?,'BLOCKED');";
+    $sql = "insert into users (user_firstname,user_lastname,user_email,user_phone,user_pwd) values(?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
