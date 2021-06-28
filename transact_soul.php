@@ -81,12 +81,12 @@ if (class_exists('DATABASE_CONNECT'))
                 $mail ->SMTPSecure='tls';
                 
                 
-                $mail ->Username='soul.payy@gmail.com';
-                $mail ->Password='miniproject123';
+                $mail ->Username='Youremail@gmail.com';
+                $mail ->Password='Your password';
             
-                $mail ->setFrom('soul.payy@gmail.com','Soul.pay');
+                $mail ->setFrom('Youremail@gmail.com','');
                 $mail ->addAddress($email);
-                $mail ->addReplyTo('soul.payy@gmail.com');
+                $mail ->addReplyTo('Youremail@gmail.com');
             
                 $mail ->isHTML(true);
                 $mail ->Subject='OTP for Soul.pay Transaction';
