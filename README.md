@@ -1,5 +1,5 @@
 # Soul.Pay
-A website for a Bank with complete signup/login, verification, admin dashboard, user dashboard , money transfer systems and much more.
+A website for a Bank with complete signup/login, verification, admin dashboard, user dashboard , money transfer systems with Email OTP system and much more.
 
 Comprehensive list of features:
     <ol>
