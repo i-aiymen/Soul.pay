@@ -19,11 +19,12 @@ if(!isset($_SESSION["user_email"]))
     <link rel="stylesheet" href="CSS/user_dashboard.css">
     <link rel="stylesheet" href="CSS/debitcard.css">
     <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <title>Document</title>
+    <title>Soul.pay | User</title>
 
     <style>
         .list { 
@@ -235,7 +236,6 @@ if(!isset($_SESSION["user_email"]))
                 </div>
             </div>
             </div>
-
        <?php                     
                           echo "<div align='center' class='custom-select'
                                 <form>
@@ -256,13 +256,66 @@ if(!isset($_SESSION["user_email"]))
    
         </section>
     </div>
-        
+ </div>
+ <div class="modal-container" id="modal_container2">
+    <div class="modal">
+      <button id="close1" onclick="toggle2()" class="cross">
+        <svg data-testid="test-svg" width="14" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Artboard-Copy-43" transform="translate(-5.000000, -5.000000)">
+            <g id="close">
+              <path d="M5.57098982,5.65032324 C5.78968342,5.43162963 6.14425581,5.43162963 6.36294941,5.65032324 L6.36294941,5.65032324 L11.9059696,11.194303 L17.450383,5.65032324 C17.6447773,5.45592892 17.9465326,5.43432955 18.1647849,5.58552513 L18.2423426,5.65032324 C18.4610362,5.86901684 18.4610362,6.22358923 18.2423426,6.44228283 L18.2423426,6.44228283 L12.6979696,11.985303 L18.2423426,17.5297164 C18.4367369,17.7241107 18.4583363,18.025866 18.3071407,18.2441184 L18.2423426,18.321676 C18.023649,18.5403696 17.6690766,18.5403696 17.450383,18.321676 L17.450383,18.321676 L11.9059696,12.777303 L6.36294941,18.321676 C6.1685551,18.5160703 5.86679977,18.5376697 5.64854745,18.3864741 L5.57098982,18.321676 C5.35229621,18.1029824 5.35229621,17.74841 5.57098982,17.5297164 L5.57098982,17.5297164 L11.1149696,11.985303 L5.57098982,6.44228283 C5.3765955,6.24788852 5.35499614,5.94613319 5.50619171,5.72788087 Z" id="Combined-Shape"></path>
+            </g>
+          </g>
+        </svg>
+      </button>
+
+      <form action="debitAppln.php" id="debitAppln">
+        <h2>Apply For New Card</h2>
+        <div class="form" id="debitform">
+
+          <div class="card-transaction space icon-relative debit">
+            <label class="label">Pick card type:<span style="color: red;">*</span></label>
+            <div class="card-types">
+              <input type="radio" name="cardtype" value="visa" class="card-type selected" checked><i class="fab fa-cc-visa"></i></input>
+              <input type="radio" name="cardtype" value="paypal" class="card-type"><i class="fab fa-cc-paypal"></i></input>
+              <input type="radio" name="cardtype" value="mastercard" class="card-type"><i class="fab fa-cc-mastercard"></i></input>
+              <input type="radio" name="cardtype" value="amex" class="card-type"><i class="fab fa-cc-amex"></i></input>
             </div>
+          </div>
+          <label class="label">Set Delivery Address:</label>
+          <div class="debit-address">
+            <div class="card-transaction space icon-relative" id="debit-details">
+              <label class="label">House No: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="house" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">Street: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="street" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">District: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="district" onkeypress="return /[a-z]/i.test(event.key)" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">State: <span style="color: red;">*</span></label>
+              <input type="text" class="input" name="state" onkeypress="return /[a-z]/i.test(event.key)" required>
+            </div>
+            <div class="card-transaction space icon-relative">
+              <label class="label">Pin Code: <span style="color: red;">*</span></label>
+              <input type="number" class="input" name="pincode" onKeyPress="if(this.value.length==6) return false;" required>
+            </div>
+          </div>
+          <div class="btn" onclick="submit();">
+            Confirm Application
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
     <?php
     require('script.php');
 
 ?>
-    
       
 
 

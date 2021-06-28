@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Atms/Branches</title>
+    <title>Soul.pay | Atm/Branches</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -14,16 +14,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/atmbranch.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <?php
         include("INCLUDES/navbar.php");
-        require_once("INCLUDES/dbconfig.inc.php");
+        require_once('DBCONFIG/dbconfig.php');
+
+    if (class_exists('DATABASE_CONNECT'))
+    {
+
+        $obj_conn  = new DATABASE_CONNECT;
+        
+        $host = $obj_conn->connect[0];
+        $user = $obj_conn->connect[1];
+        $pass = $obj_conn->connect[2];
+        $db   = $obj_conn->connect[3];
+
+
+        $conn = new mysqli($host,$user,$pass,$db);
+        
+        if ($conn->connect_error)
+        {
+            die ("Cannot connect " .$conn->connect_error);
+        }
+        else 
+        {
         ?>
     <div class="jumbotron">
         <div class="container">
@@ -133,7 +155,9 @@
     </div>
 
 
-    <?php    
+    <?php  
+        }  
+    }
     include("INCLUDES/footer.php");
 ?>
     <script type="text/javascript">
@@ -171,7 +195,7 @@
             event.preventDefault();
             const ajaxreq = new XMLHttpRequest();
             district = document.getElementById("District2").value;
-            ajaxreq.open('GET', "http://localhost/projects/Banking/includes/displayAtms.php?district=" + district, 'true');
+            ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/displayAtms.php?district=" + district, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {

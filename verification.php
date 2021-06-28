@@ -13,18 +13,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification</title>
+    <title>Soul.pay | Verification</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="css/verification.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/62d06b97ac.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <?php
-    include("includes/navbar.php");
+    include("INCLUDES/navbar.php");
     ?>
 
     <div class="section">
@@ -40,7 +41,7 @@
                 <button id="nav-btn4" class="carousel_indicator"></button>
             </div>
             <div class="verify-carousel">
-                <form action="includes/verification.inc.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <form action="INCLUDES/verification.php" method="POST" enctype="multipart/form-data" autocomplete="off">
                     <div class="carousel-container">
                         <ul class="carousel-track">
                             <li class="carousel-slide current-slide">
@@ -231,9 +232,9 @@
     </div>
 
     <?php
-    include("includes/footer.php");
+    include("INCLUDES/footer.php");
     ?>
 </body>
-<script src="js/verification.js"></script>
+<script src="JS/verification.js"></script>
 
 </html>

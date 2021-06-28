@@ -64,8 +64,8 @@
 
   .footer-fine-print {
     margin-top: 48px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-top: 1px solid #d8dce7;
   }
   
@@ -171,7 +171,8 @@
   .text-center {
     text-align: center;
   }
-    
+
+
   @media screen and (min-width: 1280px) {
 
   .container-default-1310px {
@@ -279,6 +280,10 @@
     .container-medium-700px {
       padding-right: 16px;
       padding-left: 16px;
+    }
+
+    .footer-fine-print {
+      font-size: 16px;
     }
   }
 

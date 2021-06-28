@@ -14,8 +14,9 @@ if(!isset($_SESSION["user_email"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soul.pay | History</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
 
     <style>
 
@@ -231,7 +232,7 @@ if(!isset($_SESSION["user_email"]))
 
                 else  if (strpos($q, 'All') !== false) 
                 {
-                    $email = "aiymenarbaaz03@gmail.com";
+                    $email = $_SESSION["user_email"];
                     $sql1 = "select user_accountno, user_ifsc from accounts where user_email = '$email'";
                     $result1 = $conn->query($sql1);
                     $row1 = $result1->fetch_assoc();

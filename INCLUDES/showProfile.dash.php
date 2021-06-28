@@ -1,7 +1,27 @@
 <?php
     session_start();
     $userid= $_SESSION["user_id"];
-    require_once('dbconfig.inc.php');
+    require_once($_SERVER['DOCUMENT_ROOT']."/mini_project_s4/DBCONFIG/dbconfig.php");
+
+    if (class_exists('DATABASE_CONNECT'))
+    {
+
+        $obj_conn  = new DATABASE_CONNECT;
+        
+        $host = $obj_conn->connect[0];
+        $user = $obj_conn->connect[1];
+        $pass = $obj_conn->connect[2];
+        $db   = $obj_conn->connect[3];
+
+
+        $conn = new mysqli($host,$user,$pass,$db);
+        
+        if ($conn->connect_error)
+        {
+            die ("Cannot connect " .$conn->connect_error);
+        }
+        else 
+        {
 
     $sql = "select * from users where user_id = \"$userid\";";
     $result=mysqli_query($conn,$sql);
@@ -103,3 +123,7 @@
             </div>";
 
     }
+}
+    }
+
+    ?>

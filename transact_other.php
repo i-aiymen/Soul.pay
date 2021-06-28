@@ -14,11 +14,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/user_dashboard.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <title>Document</title>
+    <title>Soul.pay | Other-Transfer</title>
 </head>
 <body>
 <?php
@@ -68,20 +69,30 @@
                     if ($result == true)
                     {    
 
-                        $msg = "Dear Customer, <br><br> $otp is the OTP for completing your Soul.pay transaction.
-                                Never share this OTP with anyone including Bank officials.
-                                <br><br>Thank you,<br>Soul.pay";
+                      require 'phpmailer/PHPMailerAutoload.php';
+                      $mail = new PHPMailer;
+                      $mail ->isSMTP();
+                  
+                      $mail ->Host='smtp.gmail.com';
+                      $mail ->port=587;
+                      $mail ->SMTPAuth=true;
+                      $mail ->SMTPSecure='tls';
+                      
+                      
+                      $mail ->Username='soul.payy@gmail.com';
+                      $mail ->Password='miniproject123';
+                  
+                      $mail ->setFrom('soul.payy@gmail.com','Soul.pay');
+                      $mail ->addAddress($email);
+                      $mail ->addReplyTo('soul.payy@gmail.com');
+                  
+                      $mail ->isHTML(true);
+                      $mail ->Subject='OTP for Other Bank Transaction';
+                      $mail ->Body="Dear Customer, <br><br> $otp is the OTP for completing your Other bank transaction.
+                              Never share this OTP with anyone including Bank officials.
+                              <br><br>Thank you,<br>Soul.pay";
 
-                        $headers = "";
-                        $headers .= "From: Soul.pay <soul.pay@soul.pay.no-reply> \r\n";
-                        $headers .= "Reply-To:" . $email . "\r\n" ."X-Mailer: PHP/" . phpversion();
-                        $headers .= 'MIME-Version: 1.0' . "\r\n";
-                        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
-
-
-                        $send = mail("$email","Soul.pay",$msg,$headers);
-
-                            if(!$send)
+                            if(!$mail->send())
                             {
                                 echo '<script type="text/javascript">alert("OTP error. Please try again.");
                                 </script>';
@@ -168,12 +179,8 @@
     </div>
     <?php
       require_once ('transact_other_pay.php');
+      require ('script.php');
     ?>
-
-<?php
-    require ('script.php');
-
-?>
 
 
 </body>

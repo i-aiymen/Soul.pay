@@ -10,17 +10,21 @@
     <!-- FONT FAMILY-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-    <title>Contact Us--Soul.pay</title>
+    <title>Soul.pay | Contact Us</title>
     <link rel="stylesheet" href="CSS/contactus.css">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
 
 <?php include 'INCLUDES/navbar.php';?>
 <!--main part-->
 <div class="main">
+
+<div style="display: grid;">
 <div class="a">
     <div style="opacity: 1;" class="sufix-line"></div>
      <h2 style="opacity: 1;" class="head">Get in touch with us<span class="span-primary-color">.</span></h2><p style="opacity: 1;" class="left-paragraph">Want to get in touch? We'd love to hear from you.<br>Here's how you can reach us...</p><br>
@@ -59,6 +63,7 @@
         
         <div class="success-message-content w-form-done"><img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5eab1fb459d0129081511bc1_icon-steps-02-banca-template.svg" alt=""><div class="success-message-text">Thank you! Your submission has been received!</div></div><div class="error-message-content w-form-fail"><div class="error-message-text">Oops! Something went wrong while submitting the form.</div></div></div></div>
 
+    </div>
     </div>
     <div class="y"></div></div>
     </div>

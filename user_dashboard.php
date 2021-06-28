@@ -16,11 +16,12 @@ if(!isset($_SESSION["user_id"])){
     <link rel="stylesheet" href="CSS/user_dashboard.css">
     <link rel="stylesheet" href="CSS/debitcard.css">
     <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <title>Document</title>
+    <title>Soul.pay | User</title>
 
 </head>
 <body>
@@ -276,9 +277,8 @@ if (class_exists('DATABASE_CONNECT'))
 
     <?php
         }
-    }
-    
-?>
+    }  
+    ?>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>

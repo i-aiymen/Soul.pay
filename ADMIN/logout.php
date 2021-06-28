@@ -1,27 +1,24 @@
 <?php session_start();
-if(empty($_SESSION['user_email'])):
-header('Location:index.php');
+if(empty($_SESSION['login'])):
+header('Location: admin.php');
 endif;
 ?>
 <!DOCTYPE html>
+  
 <html>
 
 
 <head>
-  <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost/mini_project_s4/Assets/favicons/favicon-16x16.png" type="image/x-icon">
   <title>Soul.pay | Logout</title>
   <style>
       @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-      ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-      }
-      *{
+    *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-    } 
+    }
     html,body{
       display: grid;
       height: 100%;
@@ -146,7 +143,7 @@ endif;
 <?php
 	session_destroy();
 	
- echo '<meta http-equiv="refresh" content="3;url=index.php">';
+ echo '<meta http-equiv="refresh" content="3;url=http://localhost/mini_project_s4/index.php">';
  echo'<div class="circular">
  <div class="inner"></div>
  <div class="outer"></div>

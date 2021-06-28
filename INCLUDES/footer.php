@@ -8,21 +8,24 @@
                 </p>
                 <div class="social-media-wrapper">
                     <a href="#" class="social-media-link w-inline-block">
-                        <img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7184304c19ce0ad072344_icon-social-media-01-banca-template.svg" alt=""/>
+                        <i class="fa fa-facebook-official" aria-hidden="true" style="color: #f20823; font-size:25px"></i>
                     </a>
                     <a href="#" class="social-media-link w-inline-block">
-                        <img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea71843d420871136d95791_icon-social-media-02-banca-template.svg" alt=""/>
+                        <i class="fa fa-twitter" aria-hidden="true" style="color: #f20823; font-size:25px"></i>
                     </a>
                     <a href="#" class="social-media-link w-inline-block">
-                        <img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7184350e0b34ab260dc40_icon-social-media-03-banca-template.svg" alt=""/>
+                        <i class="fa fa-instagram" aria-hidden="true" style="color: #f20823; font-size:25px"></i>
                     </a>
                     <a href="#" class="social-media-link w-inline-block">
-                        <img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea7184335ccdd42fd30f9bd_icon-social-media-04-banca-template.svg" alt=""/>
+                        <i class="fa fa-linkedin" aria-hidden="true" style="color: #f20823; font-size:25px"></i>
+                    </a>
+                    <a href="http://localhost/mini_project_s4/ADMIN/admin.php" class="social-media-link w-inline-block">
+                        <i class="fa fa-university" aria-hidden="true" style="color: #f20823; font-size:20px"></i>
                     </a>
                 </div>
                 <br>
                 <p class="mg-bottom-32px" style="font-size: 15px;">
-                © 2021 Soul.pay | Mini_Project_S4
+                © 2021 Soul.pay | All Rights Reserved
                 </p>
             </div>
             <div class="footer-column-2" style="margin-top:10px;">
@@ -43,7 +46,7 @@
                         <a href="services.php" class="nav-lin footer">Services</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="#" class="nav-lin footer">Branches & Atms</a>
+                        <a href="findAtmBranches.php" class="nav-lin footer">Branches & Atms</a>
                     </li>
 
                 </ul>
@@ -57,7 +60,7 @@
                 </div>
                 <ul role="list" class="footer-nav">
                     <li class="footer-nav-item">
-                        <a href="mailto:support@banca.com" class="nav-lin footer w-inline-block">
+                        <a href="mailto:support@soul.pay.co" class="nav-lin footer w-inline-block">
                             <img src="https://assets.website-files.com/5ea6ed9e484d220156b1c38d/5ea71f8cdc8b14eb7d4e0f89_icon-contact-us-03-banca-template.svg" alt="" class="contact-us-icon"/>
                             <div>
                                 support@soul.pay.co
@@ -83,8 +86,19 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
     </div>
-                    
+    <div class="footer-fine-print" style="padding-top: 15px;padding-bottom: 15px;">
+        <div class="container-medium-700px text-center">
+            <div>
+                <div style="font-weight: 700; margin-bottom: 5px;">Designed and Coded with Soul By: </div>
+                <div>
+                    <div style="display: inline-block;"><i class="fa fa-github"></i><a href="https://github.com/poojarrr" target="_blank" style="color: #848894; text-decoration: none; margin-right: 30px; margin-left: 5px;" onMouseOver="this.style.color='#f20823'" onMouseOut="this.style.color='#848894'">@poojarrr</a></div>
+                    <div style="display: inline-block;"><i class="fa fa-github"></i><a href="https://github.com/i-aiymen/Soul.pay" target="_blank" style="color: #848894; text-decoration: none; margin-right: 30px; margin-left: 5px" onMouseOver="this.style.color='#f20823'" onMouseOut="this.style.color='#848894'">@i-aiymen</a></div>
+                    <div style="display: inline-block;"><i class="fa fa-github"></i><a href="https://github.com/mikelord007/Soul.Pay" target="_blank"style="color: #848894; text-decoration: none; margin-right: 30px; margin-left: 5px" onMouseOver="this.style.color='#f20823'" onMouseOut="this.style.color='#848894'">@mikelord007</a></div>
+                    <div style="display: inline-block;"><i class="fa fa-github"></i><a href="#" style="color: #848894; text-decoration: none; margin-right: 30px; margin-left: 5px" onMouseOver="this.style.color='#f20823'" onMouseOut="this.style.color='#848894'">@adithya</a></div>
+                </div>
+            </div>
+        </div>
+    </div>   
 </footer>

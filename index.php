@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/credit.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-    <title>Document</title>
+    <title>Soul.pay | Home</title>
 </head>
 <body>
     <div class="page-wrapper">
@@ -50,7 +53,7 @@
     </div>
         <?php
                 include 'INCLUDES/footer.php';
-            ?>
+        ?>
 </div>
 </body>
 </html>

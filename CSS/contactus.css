@@ -75,8 +75,8 @@ h2 {
     grid-auto-columns: 1fr;
     grid-column-gap: 34px;
     grid-row-gap: 40px;
-    -ms-grid-columns: 1.8fr 1fr;
-    grid-template-columns: 1.8fr 1fr;
+    -ms-grid-columns: .5fr 1.5fr;
+    grid-template-columns: .5fr 1.5fr;
     -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
 }
@@ -299,6 +299,14 @@ input.w-button {
     height: 63%;
     background-color: #f20823;
 }
+
+@media screen and (max-width: 1440px)
+{
+    .contact-us-wrapper{
+    grid-column-gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    }
+} 
 @media screen and (max-width: 991px)
 {
     .w-layout-grid {

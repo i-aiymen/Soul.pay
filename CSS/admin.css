@@ -1,0 +1,265 @@
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  .page-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "overlap";
+  }
+
+  .item1 {
+    grid-area: overlap;
+    margin-top: 55px;
+  }
+  
+  h1 {
+    font-size:1.5em;
+    text-align: center;
+    margin-bottom:10px;
+    font-size:38px;
+    line-height:44px;
+    margin-bottom: 24px;
+    color: #0a1023;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 700;
+  }
+  .span-primary-color {
+    color: #f20823;
+  } 
+
+  
+  body {
+    background: #f1f5f9;
+  }
+  
+  .recent {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 3rem;
+  }
+  
+
+  .activity-card {
+    width: 100%;
+  }
+  
+  .activity-card,
+  .summary-card,
+  .bday-card {
+    background: #fff;
+    border-radius: 7px;
+        box-shadow: 0 4px 15px -8px rgba(0,0,0,0.4);
+  }
+  
+  
+  .activity-card h3 {
+    color: #8390A2;
+    margin: 1rem;
+  }
+  
+  .activity-card table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 7px;
+    white-space: nowrap;
+
+  }
+  
+  .activity-card thead {
+    background: #efefef;
+  }
+  
+  th, td {
+
+    font-size: .9rem;
+    padding: 1rem 1rem;
+    color: #1D2231;
+  }
+  
+  td {
+    font-size: .8rem;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #f9fafc;
+  }
+  
+  .badge {
+    padding: .2rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: .7rem;
+  }
+  
+  .badge.success {
+    background: #DEF7EC;
+    color: #027581;
+  }
+
+  .badge.warning {
+    background: #F0F6B2;
+    color: #ff8000;
+  }
+  
+  .summary-card {
+    background: #fff;
+    margin-bottom: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+  
+  .bday-flex {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .summary-single {
+    padding: .3rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .summary-single i {
+    font-size: 1.5rem;
+    color: #777;
+    padding-right: 1rem;
+  }
+  
+  .summary-single h5 {
+    color: #027581;
+    font-size: 1.1rem;
+    margin-bottom: 0rem !important;
+  }
+  
+  .summary-single small {
+    font-weight: 700;
+    color: #8390A2;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-center button {
+    background: #027581;
+    color: #fff;
+    border: 1px solid #027581;
+    border-radius: 4px;
+    padding: .4rem 1rem;
+  }
+  
+  .table-responsive {
+    overflow-x: auto ;
+  }
+
+  .button {
+
+    display: flex;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+
+    margin-left: 75px;
+    background: #dd4859;
+    border: none !important;
+    outline: none !important;
+    border-radius: 50%;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .button__icon {
+      
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8.5px;
+    color: #fff;
+    height: 100%;
+  }
+  
+  .button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+  }
+  
+
+  .block {
+    margin-right: 10px;
+  }
+
+  input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    outline: none;    border-radius: 15px;
+    top: -5px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+
+  }
+
+
+  
+  input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -5px;
+    left: -1px;
+    position: relative;
+    background-color: #dd4859;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+
+  }
+  
+  
+  @media only screen and (max-width: 910px) {
+    .recent {
+      margin-top: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 860px) {
+  
+  
+      .activity-card {
+        margin-bottom: 24px;
+      }
+      .activity-grid {
+        display: block;
+      }
+  
+      .summary {
+        margin-top: 1rem;
+      }
+      .recent {
+        margin-top: 20px;
+      }
+  }
+  
+  
+
+
+  @media screen and (max-width:767px) {
+
+     .page-wrapper {
+      display: block;
+  }
+    .item1 {
+      margin-top: 10px;
+    }    
+  }

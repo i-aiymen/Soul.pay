@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Soul.pay | Signup</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/signup.css">
+    <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/62d06b97ac.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <?php
-    include("includes/navbar.php");
+        include("INCLUDES/navbar.php");
     ?>
 
     <div class="section">
@@ -46,7 +47,7 @@
                 }
             }
             ?>
-                <form action="includes/signup.inc.php" method="POST">
+                <form action="INCLUDES/signup.php" method="POST">
                     <div class="container">
                         <div class="row">
                             <div class="col-md">
@@ -115,7 +116,7 @@
     </div>
 
     <?php
-    include("includes/footer.php");
+    include("INCLUDES/footer.php");
     ?>
 </body>
 <script src="JS/signup.js"></script>

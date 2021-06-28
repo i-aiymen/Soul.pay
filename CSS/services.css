@@ -6,6 +6,7 @@ body{
   height:auto;
   box-sizing: border-box;
 }
+
 body::-webkit-scrollbar {
   width: 0px;
   background: transparent;

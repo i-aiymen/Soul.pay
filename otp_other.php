@@ -30,19 +30,30 @@ session_start();
             $result = $conn->query($sql);
             if ($result == true)
             {
-                $msg = "Dear Customer, <br><br> $otp is the OTP for completing your Soul.pay transaction.
-                                Never share this OTP with anyone including Bank officials.
-                                <br><br>Thank you,<br>Soul.pay";
-
-                $headers = "";
-                $headers .= "From: Soul.pay <soul.pay@soul.pay.no-reply> \r\n";
-                $headers .= "Reply-To:" . $email . "\r\n" ."X-Mailer: PHP/" . phpversion();
-                $headers .= 'MIME-Version: 1.0' . "\r\n";
-                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
-              
-                $send = mail("$email","Soul.pay",$msg,$headers);
+                require 'phpmailer/PHPMailerAutoload.php';
+                      $mail = new PHPMailer;
+                      $mail ->isSMTP();
+                  
+                      $mail ->Host='smtp.gmail.com';
+                      $mail ->port=587;
+                      $mail ->SMTPAuth=true;
+                      $mail ->SMTPSecure='tls';
+                      
+                      
+                      $mail ->Username='soul.payy@gmail.com';
+                      $mail ->Password='miniproject123';
+                  
+                      $mail ->setFrom('soul.payy@gmail.com','Soul.pay');
+                      $mail ->addAddress($email);
+                      $mail ->addReplyTo('soul.payy@gmail.com');
+                  
+                      $mail ->isHTML(true);
+                      $mail ->Subject='OTP for Other Bank Transaction';
+                      $mail ->Body="Dear Customer, <br><br> $otp is the OTP for completing your Other bank transaction.
+                              Never share this OTP with anyone including Bank officials.
+                              <br><br>Thank you,<br>Soul.pay";
                 
-                if(!$send)
+                if(!$mail->send())
                 {
                     echo '<script type="text/javascript">alert("OTP error. Please try again.");
                     </script>';

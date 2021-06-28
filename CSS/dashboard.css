@@ -104,7 +104,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2rem;
-  padding: 0 .5rem;
 }
 
 .nav__logo-icon {
@@ -353,6 +352,8 @@ a {
    .right-side {
        text-align: center;
    }
+
+  
 
 
    /*****transact********/
@@ -861,10 +862,33 @@ cursor: pointer;
   cursor: pointer;
 }
 
-.card-type.selected{
-  border-radius: 14px;
-  padding: 0 3px 0 3px;
-  border: red 2px solid;
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  outline: none;    border-radius: 15px;
+  top: -5px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -5px;
+  left: -1px;
+  position: relative;
+  background-color: #dd4859;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+
 }
 
 .fa-cc-visa{
