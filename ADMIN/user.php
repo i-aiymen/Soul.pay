@@ -19,7 +19,7 @@
 <body>
     <div class="page-wrapper">
 <?php
-    include ($_SERVER['DOCUMENT_ROOT']."/INCLUDES/admin_nav.php");
+    include ($_SERVER['DOCUMENT_ROOT']."/Soulbank/INCLUDES/admin_nav.php");
 ?>
     <div class="item1">
     <h1>SOUL<span class="span-primary-color">.</span>PAY PANEL</h1>
@@ -33,7 +33,7 @@
     else
     {
 
-        require_once($_SERVER['DOCUMENT_ROOT']."/DBCONFIG/dbconfig.php");
+        require_once($_SERVER['DOCUMENT_ROOT']."/Soulbank/DBCONFIG/dbconfig.php");
 
         if (class_exists('DATABASE_CONNECT'))
         {
