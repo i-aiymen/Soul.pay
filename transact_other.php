@@ -69,30 +69,20 @@
                     if ($result == true)
                     {    
 
-                      require 'phpmailer/PHPMailerAutoload.php';
-                      $mail = new PHPMailer;
-                      $mail ->isSMTP();
-                  
-                      $mail ->Host='smtp.gmail.com';
-                      $mail ->port=587;
-                      $mail ->SMTPAuth=true;
-                      $mail ->SMTPSecure='tls';
-                      
-                      
-                      $mail ->Username='Youremail@gmail.com';
-                      $mail ->Password='Your password';
+                        $msg = "Dear Customer, <br><br> $otp is the OTP for completing your Other bank transaction.
+                                Never share this OTP with anyone including Bank officials.
+                                <br><br>Thank you,<br>Soul.pay";
 
-                      $mail ->setFrom('Youremail@gmail.com','');
-                      $mail ->addAddress($email);
-                      $mail ->addReplyTo('Youremail@gmail.com');
-                  
-                      $mail ->isHTML(true);
-                      $mail ->Subject='OTP for Other Bank Transaction';
-                      $mail ->Body="Dear Customer, <br><br> $otp is the OTP for completing your Other bank transaction.
-                              Never share this OTP with anyone including Bank officials.
-                              <br><br>Thank you,<br>Soul.pay";
+                        $headers = "";
+                        $headers .= "From: Soul.pay <soul.pay@soul.pay.no-reply> \r\n";
+                        $headers .= "Reply-To:" . $email . "\r\n" ."X-Mailer: PHP/" . phpversion();
+                        $headers .= 'MIME-Version: 1.0' . "\r\n";
+                        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
-                            if(!$mail->send())
+
+                        $send = mail("$email","Soul.pay",$msg,$headers);
+
+                            if(!$send)
                             {
                                 echo '<script type="text/javascript">alert("OTP error. Please try again.");
                                 </script>';

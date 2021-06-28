@@ -6,10 +6,10 @@
 
         public function __construct()
         {
-            $this->connect[0] = "127.0.0.1";
-            $this->connect[1] = "root";
-            $this->connect[2] = "almaas03";
-            $this->connect[3] = "banking";
+            $this->connect[0] = "remotemysql.com";
+            $this->connect[1] = "B5zVo366oe";
+            $this->connect[2] = "VvjCYtf2y0";
+            $this->connect[3] = "B5zVo366oe";
         }
 
         public function __destruct()

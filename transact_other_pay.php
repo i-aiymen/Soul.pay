@@ -119,26 +119,6 @@
                         </script>';
                         exit;
                     }
-                    if ($otp = $row['otp'])
-                    {
-                        $time_db = $row['otptime'];
-
-                        $time_now = strtotime($time_db);
-                        if (time() - $time_now > 10 * 60) 
-                        {
-                            echo '<script type="text/javascript">alert("Verification code expired  Get new code to finish transferring.");
-                            </script>';
-                            echo ("<script>location.href='transact_other.php'</script>");
-                        }
-                        $sql2 = "update accounts set otp = null where user_email = '$email'";     
-                        $result2 = $conn->query($sql2);
-                    } 
-                    else
-                    {
-                        echo'<script type="text/javascript">alert("The verification code is a mistake <strong> You can not make out the transaction.");
-                        </script>';  
-                        exit;
-                    }
                 }
 
 

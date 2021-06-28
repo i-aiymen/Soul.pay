@@ -11,15 +11,15 @@
     <title>Soul.pay | Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="shortcut icon" href="http://localhost/mini_project_s4/Assets/favicons/favicon-16x16.png" type="image/x-icon">   
-    <link rel="stylesheet" href="http://localhost/mini_project_s4/CSS/admin_nav.css">
-    <link rel="stylesheet" href="http://localhost/mini_project_s4/CSS/admin.css">
+    <link rel="shortcut icon" href="http://localhost/Soulbank/Assets/favicons/favicon-16x16.png" type="image/x-icon">   
+    <link rel="stylesheet" href="http://localhost/Soulbank/CSS/admin_nav.css">
+    <link rel="stylesheet" href="http://localhost/Soulbank/CSS/admin.css">
 
 </head>
 <body>
     <div class="page-wrapper">
 <?php
-    include ($_SERVER['DOCUMENT_ROOT']."/mini_project_s4/INCLUDES/admin_nav.php");
+    include ($_SERVER['DOCUMENT_ROOT']."/INCLUDES/admin_nav.php");
 ?>
     <div class="item1">
     <h1>SOUL<span class="span-primary-color">.</span>PAY PANEL</h1>
@@ -33,7 +33,7 @@
     else
     {
 
-        require_once($_SERVER['DOCUMENT_ROOT']."/mini_project_s4/DBCONFIG/dbconfig.php");
+        require_once($_SERVER['DOCUMENT_ROOT']."/DBCONFIG/dbconfig.php");
 
         if (class_exists('DATABASE_CONNECT'))
         {

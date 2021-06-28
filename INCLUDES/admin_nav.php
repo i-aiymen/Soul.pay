@@ -2,7 +2,7 @@
         <div class="container-default-1310px navbar" style="padding-left:0px;">
             <div class="split-left-container">
                 <a href="#" aria-current="page" class="brand w-nav-brand w--current">
-                    <img src="http://localhost/mini_project_s4/Assets/images/photo3.svg" alt="" height=150 max-width=100% class="header-logo"/>
+                    <img src="http://localhost/Soulbank/Assets/images/photo3.svg" alt="" height=150 max-width=100% class="header-logo"/>
                 </a>
                 <nav id="menuList" role="navigation" class="nav-menu w-nav-menu" style="height: 20vh; background: #f1f5f9">        
                     <div class="nav-menu-button-wrapper" style="padding-top:0;">
@@ -18,8 +18,8 @@
             </div>
         </div>
     </div>
-    <script src="http://localhost/mini_project_s4/JS/main.js"></script>
-    <script src="http://localhost/mini_project_s4/JS/nav.js"></script>
+    <script src="http://localhost/Soulbank/JS/main.js"></script>
+    <script src="http://localhost/Soulbank/JS/nav.js"></script>
     <script>
         var menuList = document.getElementById("menuList");
         menuList.style.maxHeight = "0px";

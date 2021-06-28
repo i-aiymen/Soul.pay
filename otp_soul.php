@@ -41,12 +41,12 @@
                 $mail ->SMTPSecure='tls';
                 
                 
-                $mail ->Username='Youremail@gmail.com';
-                $mail ->Password='Your password';
+                $mail ->Username='soul.payy@gmail.com';
+                $mail ->Password='miniproject123';
             
-                $mail ->setFrom('Youremail@gmail.com','');
+                $mail ->setFrom('soul.payy@gmail.com','Soul.pay');
                 $mail ->addAddress($email);
-                $mail ->addReplyTo('Youremail@gmail.com');
+                $mail ->addReplyTo('soul.payy@gmail.com');
             
                 $mail ->isHTML(true);
                 $mail ->Subject='OTP for Soul.pay Transaction';

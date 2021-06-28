@@ -7,8 +7,8 @@
   <head>
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
-    <link rel="shortcut icon" href="http://localhost/mini_project_s4/Assets/favicons/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="http://localhost/mini_project_s4/CSS/admin_login.css" />
+    <link rel="shortcut icon" href="http://localhost/Soulbank/Assets/favicons/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="http://localhost/Soulbank/CSS/admin_login.css" />
     <title>Soul.pay | Admin</title>
   </head>
   <body>

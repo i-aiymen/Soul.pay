@@ -163,7 +163,7 @@
     <script type="text/javascript">
         function showDistricts(state, name) {
             const ajaxreq = new XMLHttpRequest();
-            ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/sendDistricts.php?selectvalue=" + state +"&type="+name, 'true');
+            ajaxreq.open('GET', "http://localhost/Soulbank/INCLUDES/sendDistricts.php?selectvalue=" + state +"&type="+name, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
@@ -182,7 +182,7 @@
             const ajaxreq = new XMLHttpRequest();
             district = document.getElementById("District").value;
             // document.getElementById("displaybranchesnAtms").innerHTML = district;
-            ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/displayBranches.php?district=" + district, 'true');
+            ajaxreq.open('GET', "http://localhost/Soulbank/INCLUDES/displayBranches.php?district=" + district, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {
@@ -195,7 +195,7 @@
             event.preventDefault();
             const ajaxreq = new XMLHttpRequest();
             district = document.getElementById("District2").value;
-            ajaxreq.open('GET', "http://localhost/mini_project_s4/INCLUDES/displayAtms.php?district=" + district, 'true');
+            ajaxreq.open('GET', "http://localhost/Soulbank/INCLUDES/displayAtms.php?district=" + district, 'true');
             ajaxreq.send();
             ajaxreq.onreadystatechange = function () {
                 if (ajaxreq.readyState == 4 && ajaxreq.status == 200) {

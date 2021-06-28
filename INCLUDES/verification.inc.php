@@ -33,7 +33,7 @@
         $verifyArr['aadharFrontSize'] = $_FILES["aadharf"]["size"];
         $verifyArr['aadharBackSize'] = $_FILES["aadharb"]["size"];
 
-        require_once($_SERVER['DOCUMENT_ROOT']."/mini_project_s4/DBCONFIG/dbconfig.php");
+        require_once($_SERVER['DOCUMENT_ROOT']."/Soulbank/DBCONFIG/dbconfig.php");
 
     if (class_exists('DATABASE_CONNECT'))
     {

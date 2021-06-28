@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="css/verification.css">
+    <link rel="stylesheet" href="CSS/verification.css">
     <link rel="shortcut icon" href="Assets/favicons/favicon-16x16.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/62d06b97ac.js" crossorigin="anonymous"></script>
 </head>
@@ -41,7 +41,7 @@
                 <button id="nav-btn4" class="carousel_indicator"></button>
             </div>
             <div class="verify-carousel">
-                <form action="INCLUDES/verification.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <form action="INCLUDES/verification.inc.php" method="POST" enctype="multipart/form-data" autocomplete="off">
                     <div class="carousel-container">
                         <ul class="carousel-track">
                             <li class="carousel-slide current-slide">

@@ -87,11 +87,12 @@ function createUser($conn, $fname, $lname, $email, $phone, $pwd)
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../login.php?error=none");
+    exit();
 }
 
 function verifyUser($conn,$verifyArr,$userid)
 {   
-    $sql = "update users SET `user_firstname` = ?, `user_lastname` = ?, `user_dob`= ?, `user_email`= ?, `user_phone`= ?, `user_aadharno`= ?, `user_pin`= ?,`user_nationality`= ?, `user_houseno`= ?, `use_street`= ?, `user_district`= ?, `user_state`= ?, `user_accountstate`= 'block', `user_aadharfrontname`= ?, `user_aadharfrontsize`= ?, `user_aadharbackname`= ?, `user_aadharbacksize`= ?, `user_pincode`= ?, `user_accountno`= ?, `user_ifsc`= ? WHERE `users`.`user_id` = ?;";
+    $sql = "update users SET `user_firstname` = ?, `user_lastname` = ?, `user_dob`= ?, `user_email`= ?, `user_phone`= ?, `user_aadharno`= ?, `user_pin`= ?, `user_nationality`= ?, `user_houseno`= ?, `use_street`= ?, `user_district`= ?, `user_state`= ?, `user_accountstate`= 'block', `user_aadharfrontname`= ?, `user_aadharfrontsize`= ?, `user_aadharbackname`= ?, `user_aadharbacksize`= ?, `user_pincode`= ?, `user_ifsc`= ?,`user_accountno`= ? WHERE `users`.`user_id` = ?;";
     
     // update users SET `user_firstname` = 'Manu', `user_lastname` = 'Jasan', `user_dob`= '10-09-2000', `user_email`= 'manujasan23@gmail.com', `user_phone`= 3838383838, `user_aadharno`= 939393938281, `user_pin`= '$2y$10$3hlIC1F.Q3dZxREulp0Sp.HmqrQ3NMCdVTx2TXLtBAWCUauf6K4.W', `user_balance`= 5000, `user_nationality`= 'India', `user_houseno`= '23', `use_street`= 'what', `user_district`= 'kottayam', `user_state`= 'kerala', `user_accountstate`= 'BLOCKED', `user_aadharfrontname`= 'mike', `user_aadharfrontsize`= 38383, `user_aadharbackname`= 'mdj', `user_aadharbacksize`= 328282, `user_pincode`= 38383, `user_accountno`= 3333838 WHERE `users`.`user_id` = 9;
 
@@ -108,20 +109,18 @@ function verifyUser($conn,$verifyArr,$userid)
     $ifsc="SOUL0000".$rand;
     // mysqli_stmt_bind_param($stmt, "ss", $verifyArr['fname'],$userid);
 
-    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssss", $verifyArr['fname'], $verifyArr['lname'],$verifyArr['dob'], $verifyArr['email'], $verifyArr['phone'],$verifyArr['aadharNum'], $hashSpin,$verifyArr['nationality'],$verifyArr['house'],$verifyArr['street'],$verifyArr['district'],$verifyArr['state'],$verifyArr['aadharFrontName'],$verifyArr['aadharFrontSize'],$verifyArr['aadharBackName'],$verifyArr['aadharBackSize'],$verifyArr['pincode'],$useraccountno,$ifsc,$userid);
+    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssss", $verifyArr['fname'], $verifyArr['lname'],$verifyArr['dob'], $verifyArr['email'], $verifyArr['phone'],$verifyArr['aadharNum'], $hashSpin,$verifyArr['nationality'],$verifyArr['house'],$verifyArr['street'],$verifyArr['district'],$verifyArr['state'],$verifyArr['aadharFrontName'],$verifyArr['aadharFrontSize'],$verifyArr['aadharBackName'],$verifyArr['aadharBackSize'],$verifyArr['pincode'],$ifsc,$useraccountno,$userid);
 
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    $sql = "INSERT INTO `accounts` (`user_id`, `currency`, `user_email`, `user_lastname`, `user_firstname`, `user_accountno`, `user_ifsc`, `limit_per_day_transfer`, `amounts_transferred`, `amounts_from_reserve`, `amounts_from_others`, `user_balance`, `user_accounttype`, `otp`, `otptime`) VALUES (?, 'Rs', ?, ?, ?, ?, ?, '20000', '', '', '', '5000', 'block', '', '');";
+    $sql = "INSERT INTO `accounts` (`user_id`, `currency`, `user_email`, `user_lastname`, `user_firstname`, `user_accountno`, `user_ifsc`, `limit_per_day_transfer`, `amounts_transferred`, `amounts_from_reserve`, `amounts_from_others`, `user_balance`, `user_accounttype`, `otp`) VALUES (?, 'Rs', ?, ?, ?, ?, ?, '20000', '', '', '', '5000', 'block', '');";
 
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../verification.php?error=stmtfailed");
         exit();
     }
-
-    
 
     mysqli_stmt_bind_param($stmt, "ssssss", $userid, $verifyArr['email'], $verifyArr['lname'], $verifyArr['fname'],$useraccountno,$ifsc);
     mysqli_stmt_execute($stmt);
@@ -176,5 +175,3 @@ function loginUser($conn, $email, $pwd)
         }
     }
 }
-
-?>

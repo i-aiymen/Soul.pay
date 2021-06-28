@@ -9,7 +9,7 @@ endif;
 
 
 <head>
-  <link rel="shortcut icon" href="http://localhost/mini_project_s4/Assets/favicons/favicon-16x16.png" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost/Soulbank/Assets/favicons/favicon-16x16.png" type="image/x-icon">
   <title>Soul.pay | Logout</title>
   <style>
       @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -143,7 +143,7 @@ endif;
 <?php
 	session_destroy();
 	
- echo '<meta http-equiv="refresh" content="3;url=http://localhost/mini_project_s4/index.php">';
+ echo '<meta http-equiv="refresh" content="3;url=http://localhost/Soulbank/index.php">';
  echo'<div class="circular">
  <div class="inner"></div>
  <div class="outer"></div>
