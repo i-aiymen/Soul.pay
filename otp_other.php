@@ -40,12 +40,12 @@ session_start();
                       $mail ->SMTPSecure='tls';
                       
                       
-                      $mail ->Username='soul.payy@gmail.com';
-                      $mail ->Password='miniproject123';
-                  
-                      $mail ->setFrom('soul.payy@gmail.com','Soul.pay');
+                      $mail ->Username='Youremail@gmail.com';
+                      $mail ->Password='Your password';
+
+                      $mail ->setFrom('Youremail@gmail.com','');
                       $mail ->addAddress($email);
-                      $mail ->addReplyTo('soul.payy@gmail.com');
+                      $mail ->addReplyTo('Youremail@gmail.com');
                   
                       $mail ->isHTML(true);
                       $mail ->Subject='OTP for Other Bank Transaction';
