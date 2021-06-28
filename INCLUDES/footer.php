@@ -19,7 +19,7 @@
                     <a href="#" class="social-media-link w-inline-block">
                         <i class="fa fa-linkedin" aria-hidden="true" style="color: #f20823; font-size:25px"></i>
                     </a>
-                    <a href="https://soulpay.herokuapp.com/ADMIN/admin.php" class="social-media-link w-inline-block">
+                    <a href="http://localhost/Soulbank/ADMIN/admin.php" class="social-media-link w-inline-block">
                         <i class="fa fa-university" aria-hidden="true" style="color: #f20823; font-size:20px"></i>
                     </a>
                 </div>
